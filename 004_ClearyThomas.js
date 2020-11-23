@@ -309,12 +309,12 @@ class MovedShape {
 
   moveShape() {
     if (this.incomingShape.circleX === undefined && this.incomingShape.arcX === undefined) {
-      if(this.incomingShape.rectX > width || this.incomingShape.rectX < 0){
+      if(this.incomingShape.rectX > 600 || this.incomingShape.rectX < 0){
         this.incomingShape.speedX = this.incomingShape.speedX*-1;
       }
       this.incomingShape.rectX = this.incomingShape.rectX + this.incomingShape.speedX;
 
-      if(this.incomingShape.rectY > height || this.incomingShape.rectY < 0){
+      if(this.incomingShape.rectY > 600 || this.incomingShape.rectY < 0){
         this.incomingShape.speedY = this.incomingShape.speedY*-1;
       }
       this.incomingShape.rectY = this.incomingShape.rectY + this.incomingShape.speedY;
@@ -327,12 +327,12 @@ class MovedShape {
     }
 
     if (this.incomingShape.rectX === undefined && this.incomingShape.arcX === undefined) {
-      if(this.incomingShape.circleX > width || this.incomingShape.circleX < 0){
+      if(this.incomingShape.circleX > 600 || this.incomingShape.circleX < 0){
         this.incomingShape.speedX = this.incomingShape.speedX*-1;
       }
       this.incomingShape.circleX = this.incomingShape.circleX + this.incomingShape.speedX
 
-      if(this.incomingShape.circleY > height || this.incomingShape.circleY < 0){
+      if(this.incomingShape.circleY > 600 || this.incomingShape.circleY < 0){
         this.incomingShape.speedY = this.incomingShape.speedY*-1;
       }
       this.incomingShape.circleY = this.incomingShape.circleY + this.incomingShape.speedY;
@@ -345,12 +345,12 @@ class MovedShape {
     }
 
     if (this.incomingShape.rectX === undefined && this.incomingShape.circleX === undefined) {
-      if(this.incomingShape.arcX > width || this.incomingShape.arcX < 0){
+      if(this.incomingShape.arcX > 600 || this.incomingShape.arcX < 0){
         this.incomingShape.speedX = this.incomingShape.speedX*-1;
       }
       this.incomingShape.arcX = this.incomingShape.arcX + this.incomingShape.speedX;
 
-      if(this.incomingShape.arcY > height || this.incomingShape.arcY < 0){
+      if(this.incomingShape.arcY > 600 || this.incomingShape.arcY < 0){
         this.incomingShape.speedY = this.incomingShape.speedY*-1;
       }
       this.incomingShape.arcY = this.incomingShape.arcY + this.incomingShape.speedY;

@@ -749,37 +749,10 @@ let jamieQuad20 = {
   speed: 10
 }
 
-// let circles =[jamieCircle01, jamieCircle02, jamieCircle03, jamieCircle04, jamieCircle05, jamieCircle06, jamieCircle07, jamieCircle08, jamieCircle09, jamieCircle10, jamieCircle11, jamieCircle12, jamieCircle13, jamieCircle14, jamieCircle15, jamieCircle16]
-//
-// let circleArray =[]
-//
-// let rects =[jamieRect01, jamieRect02, jamieRect03, jamieRect04, jamieRect05, jamieRect06, jamieRect07, jamieRect08, jamieRect09]
-//
-// let rectArray =[]
-//
-// // let jamieQuads =[jamiejamieQuad01, jamiejamieQuad02, jamiejamieQuad03, jamiejamieQuad04, jamiejamieQuad05, jamiejamieQuad06, jamiejamieQuad07, jamiejamieQuad08, jamiejamieQuad09, jamieQuad10, jamieQuad11, jamieQuad12, jamieQuad13, jamieQuad14, jamieQuad15, jamieQuad16, jamieQuad17, jamieQuad18, jamieQuad19, jamieQuad20]
-// let jamieQuads =[jamiejamieQuad01, jamiejamieQuad02, jamiejamieQuad03, jamiejamieQuad04, jamiejamieQuad05, jamiejamieQuad06, jamiejamieQuad07, jamiejamieQuad08, jamiejamieQuad09, jamieQuad10, jamieQuad11, jamieQuad12]
-//
-//
-// let jamieQuadArray =[]
-
-
-
-
-
-
-
-
-
-
 // AC Notes: consolidate into 1 array
 // Your order in which you draw is important. Circles have to be above rectangles (and vice versa) to create the appropriate overlaps)
 let jamieShapes = [jamieCircle01, jamieCircle02, jamieCircle03, jamiejamieQuad01, jamieRect01, jamieRect02, jamieCircle04, jamieCircle05, jamieCircle06, jamiejamieQuad02, jamiejamieQuad03, jamieRect03, jamieRect04, jamieCircle07, jamieCircle08, jamieCircle09, jamieCircle10, jamieRect05, jamieRect06, jamiejamieQuad04, jamieCircle11, jamieCircle12, jamiejamieQuad05, jamieRect07, jamieRect08, jamieCircle13, jamieCircle14, jamieRect09, jamiejamieQuad06, jamiejamieQuad07, jamieCircle15, jamieCircle16, jamiejamieQuad08, jamiejamieQuad09, jamieQuad10, jamieQuad11, jamieQuad12, jamieQuad13, jamieQuad14, jamieQuad15, jamieQuad16, jamieQuad17, jamieQuad18, jamieQuad19, jamieQuad20]
 let jamieShapesArray= [];
-
-
-
-
 
 let jamieSpeedMultiplier = 1;
 
@@ -865,9 +838,6 @@ let jamieSpeedMultiplier = 1;
 // }
 
 
-
-
-
 class Guitar {
   constructor(incomingShape) {
     this.incomingShape = incomingShape;
@@ -914,12 +884,12 @@ class Guitar {
       strokeWeight(0)
       fill(this.incomingShape.color)
 
-      if(this.incomingShape.circleX < 0 || this.incomingShape.circleX > width) {
+      if(this.incomingShape.circleX < 0 || this.incomingShape.circleX > 600) {
         this.incomingShape.speedX = this.incomingShape.speedX *-1;
       }
       this.incomingShape.circleX = this.incomingShape.circleX + this.incomingShape.speedX;
 
-      if(this.incomingShape.circleY < 0 || this.incomingShape.circleY > height) {
+      if(this.incomingShape.circleY < 0 || this.incomingShape.circleY > 600) {
         this.incomingShape.speedY = this.incomingShape.speedY *-1;
       }
       this.incomingShape.circleY = this.incomingShape.circleY + this.incomingShape.speedX;

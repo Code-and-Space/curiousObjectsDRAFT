@@ -446,13 +446,13 @@ class CamiloKendama {
       fill(this.incomingShape.color);
       push();
       //MOVE X
-      if (this.incomingShape.rectX > width || this.incomingShape.rectX < 0) {
+      if (this.incomingShape.rectX > 600 || this.incomingShape.rectX < 0) {
         this.incomingShape.speedX = this.incomingShape.speedX * -1;
       }
       this.incomingShape.rectX = this.incomingShape.rectX + this.incomingShape.speedX;
 
       //MOVE Y
-      if (this.incomingShape.rectY > height || this.incomingShape.rectY < 0) {
+      if (this.incomingShape.rectY > 600 || this.incomingShape.rectY < 0) {
         this.incomingShape.speedY = this.incomingShape.speedY * -1;
       }
       this.incomingShape.rectY = this.incomingShape.rectY + this.incomingShape.speedY;
@@ -485,12 +485,12 @@ class CamiloKendama {
       strokeWeight(this.incomingShape.strokeweight);
       fill(this.incomingShape.color);
 
-      if (this.incomingShape.circX > width || this.incomingShape.circX < 0) {
+      if (this.incomingShape.circX > 600 || this.incomingShape.circX < 0) {
         this.incomingShape.speedX = this.incomingShape.speedX * -1;
       }
       this.incomingShape.circX = this.incomingShape.circX + this.incomingShape.speedX;
       //MOVE X
-      if (this.incomingShape.circY > height || this.incomingShape.circY < 0) {
+      if (this.incomingShape.circY > 600 || this.incomingShape.circY < 0) {
         this.incomingShape.speedY = this.incomingShape.speedY * -1;
       }
       this.incomingShape.circY = this.incomingShape.circY + this.incomingShape.speedY;
@@ -528,14 +528,14 @@ class CamiloKendama {
         push();
 
         //MOVE X
-        if (this.incomingShape.arcY > height || this.incomingShape.arcY < 0) {
+        if (this.incomingShape.arcY > 600 || this.incomingShape.arcY < 0) {
           this.incomingShape.speedY = this.incomingShape.speedY * -1;
           // console.log('test')
         }
         this.incomingShape.arcY = this.incomingShape.arcY + this.incomingShape.speedY;
 
         //MOVE Y
-        if (this.incomingShape.arcX > height || this.incomingShape.arcX < 0) {
+        if (this.incomingShape.arcX > 600 || this.incomingShape.arcX < 0) {
           this.incomingShape.speedX = this.incomingShape.speedX * -1;
         }
         this.incomingShape.arcX = this.incomingShape.arcX + this.incomingShape.speedX;
@@ -550,14 +550,14 @@ class CamiloKendama {
         push()
 
         //MOVE X
-        if (this.incomingShape.arcY > height || this.incomingShape.arcY < 0) {
+        if (this.incomingShape.arcY > 600 || this.incomingShape.arcY < 0) {
           this.incomingShape.speedY = this.incomingShape.speedY * -1;
           // console.log('test')
         }
         this.incomingShape.arcY = this.incomingShape.arcY + this.incomingShape.speedY;
 
         //MOVE Y
-        if (this.incomingShape.arcX > height || this.incomingShape.arcX < 0) {
+        if (this.incomingShape.arcX > 600 || this.incomingShape.arcX < 0) {
           this.incomingShape.speedX = this.incomingShape.speedX * -1;
         }
         this.incomingShape.arcX = this.incomingShape.arcX + this.incomingShape.speedX;

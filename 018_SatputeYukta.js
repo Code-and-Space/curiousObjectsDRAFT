@@ -251,7 +251,7 @@ class YuktaClock {
         ellipse(this.incomingShape.ellipseX, this.incomingShape.ellipseY, this.incomingShape.ellipseWidth, this.incomingShape.ellipseHeight);
         pop();
       } else {
-        if (this.incomingShape.ellipseWidth > width || this.incomingShape.ellipseWidth < 0) {
+        if (this.incomingShape.ellipseWidth > 600 || this.incomingShape.ellipseWidth < 0) {
           this.incomingShape.speed = this.incomingShape.speed*-1;
         }
         this.incomingShape.ellipseWidth = this.incomingShape.ellipseWidth + this.incomingShape.speed;

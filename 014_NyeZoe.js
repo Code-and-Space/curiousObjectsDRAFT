@@ -260,12 +260,12 @@ class Mirror_Zoe {
     if (this.incomingShape.ellipseX === undefined) {
       push();
       fill(this.incomingShape.color);
-      if (this.incomingShape.transX > width || this.incomingShape.transX < 0) {
+      if (this.incomingShape.transX > 600 || this.incomingShape.transX < 0) {
         this.incomingShape.speedX = this.incomingShape.speedX * -1;
       }
       this.incomingShape.transX = this.incomingShape.transX + this.incomingShape.speedX;
 
-      if (this.incomingShape.transY > height || this.incomingShape.transY < 0) {
+      if (this.incomingShape.transY > 600 || this.incomingShape.transY < 0) {
         this.incomingShape.speedY = this.incomingShape.speedY * -1;
       }
       this.incomingShape.transY = this.incomingShape.transY + this.incomingShape.speedY;
@@ -290,12 +290,12 @@ class Mirror_Zoe {
 
       push()
       fill(this.incomingShape.color);
-      if (this.incomingShape.circleX > width || this.incomingShape.circleX < 0) {
+      if (this.incomingShape.circleX > 600 || this.incomingShape.circleX < 0) {
         this.incomingShape.speedX = this.incomingShape.speedX * -1;
       }
       this.incomingShape.circleX = this.incomingShape.circleX + this.incomingShape.speedX;
 
-      if (this.incomingShape.circleY > height || this.incomingShape.circleY < 0) {
+      if (this.incomingShape.circleY > 600 || this.incomingShape.circleY < 0) {
         this.incomingShape.speedY = this.incomingShape.speedY * -1;
       }
       this.incomingShape.circleY = this.incomingShape.circleY + this.incomingShape.speedY;

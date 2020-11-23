@@ -458,11 +458,11 @@ class MovedBox {
   moveBox() {
     if (this.incomingShape.ellipseX === undefined && this.incomingShape.p1X === undefined) {
       push();
-      if (this.incomingShape.transX > width || this.incomingShape.transX < 0) {
+      if (this.incomingShape.transX > 600 || this.incomingShape.transX < 0) {
         this.incomingShape.speedX = this.incomingShape.speedX*-1;
       }
       this.incomingShape.transX = this.incomingShape.transX + this.incomingShape.speedX;
-      if (this.incomingShape.transY > width || this.incomingShape.transY < 0) {
+      if (this.incomingShape.transY > 600 || this.incomingShape.transY < 0) {
         this.incomingShape.speedY = this.incomingShape.speedY*-1;
       }
       this.incomingShape.transY = this.incomingShape.transY + this.incomingShape.speedY;
@@ -488,11 +488,11 @@ class MovedBox {
   moveEllipse() {
     if (this.incomingShape.rectX === undefined && this.incomingShape.p1X === undefined) {
       push();
-      if (this.incomingShape.transX > width || this.incomingShape.transX < 0) {
+      if (this.incomingShape.transX > 600 || this.incomingShape.transX < 0) {
         this.incomingShape.speedX = this.incomingShape.speedX*-1;
       }
       this.incomingShape.transX = this.incomingShape.transX + this.incomingShape.speedX;
-      if (this.incomingShape.transY > width || this.incomingShape.transY < 0) {
+      if (this.incomingShape.transY > 600 || this.incomingShape.transY < 0) {
         this.incomingShape.speedY = this.incomingShape.speedY*-1;
       }
       this.incomingShape.transY = this.incomingShape.transY + this.incomingShape.speedY;
@@ -521,42 +521,42 @@ class MovedBox {
       stroke(255);
       strokeWeight(3);
 
-      if (this.incomingShape.p1X > width || this.incomingShape.p1X < 0) {
+      if (this.incomingShape.p1X > 600 || this.incomingShape.p1X < 0) {
         this.incomingShape.speedX1 = this.incomingShape.speedX1*-1;
       }
       this.incomingShape.p1X = this.incomingShape.p1X + this.incomingShape.speedX1;
 
-      if (this.incomingShape.p1Y > width || this.incomingShape.p1Y < 0) {
+      if (this.incomingShape.p1Y > 600 || this.incomingShape.p1Y < 0) {
         this.incomingShape.speedY1 = this.incomingShape.speedY1*-1;
       }
       this.incomingShape.p1Y = this.incomingShape.p1Y + this.incomingShape.speedY1;
 
-      if (this.incomingShape.p2X > width || this.incomingShape.p2X < 0) {
+      if (this.incomingShape.p2X > 600 || this.incomingShape.p2X < 0) {
         this.incomingShape.speedX2 = this.incomingShape.speedX2*-1;
       }
       this.incomingShape.p2X = this.incomingShape.p2X + this.incomingShape.speedX2;
 
-      if (this.incomingShape.p2Y > width || this.incomingShape.p2Y < 0) {
+      if (this.incomingShape.p2Y > 600 || this.incomingShape.p2Y < 0) {
         this.incomingShape.speedY2 = this.incomingShape.speedY2*-1;
       }
       this.incomingShape.p2Y = this.incomingShape.p2Y + this.incomingShape.speedY2;
 
-      if (this.incomingShape.p3X > width || this.incomingShape.p3X < 0) {
+      if (this.incomingShape.p3X > 600 || this.incomingShape.p3X < 0) {
         this.incomingShape.speedX3 = this.incomingShape.speedX3*-1;
       }
       this.incomingShape.p3X = this.incomingShape.p3X + this.incomingShape.speedX3;
 
-      if (this.incomingShape.p3Y > width || this.incomingShape.p3Y < 0) {
+      if (this.incomingShape.p3Y > 600 || this.incomingShape.p3Y < 0) {
         this.incomingShape.speedY3 = this.incomingShape.speedY3*-1;
       }
       this.incomingShape.p3Y = this.incomingShape.p3Y + this.incomingShape.speedY3;
 
-      if (this.incomingShape.p4X > width || this.incomingShape.p4X < 0) {
+      if (this.incomingShape.p4X > 600 || this.incomingShape.p4X < 0) {
         this.incomingShape.speedX4 = this.incomingShape.speedX4*-1;
       }
       this.incomingShape.p4X = this.incomingShape.p4X + this.incomingShape.speedX4;
 
-      if (this.incomingShape.p4Y > width || this.incomingShape.p4Y < 0) {
+      if (this.incomingShape.p4Y > 600 || this.incomingShape.p4Y < 0) {
         this.incomingShape.speedY4 = this.incomingShape.speedY4*-1;
       }
       this.incomingShape.p4Y = this.incomingShape.p4Y + this.incomingShape.speedY4;

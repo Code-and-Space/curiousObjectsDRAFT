@@ -212,7 +212,7 @@ let tylerShapes = [box01, circle01, circle02, circle03, circle04, circle05, circ
 let tylerShapesArray = [];
 
 // This is to control the time it takes to run a full cycle.
-let tylerSpeedMultiplier = 4
+let tylerSpeedMultiplier = 2
 
 // function setup() {
 //   createCanvas(600, 600);
@@ -273,12 +273,12 @@ class TylerGlass {
   moveCircle() {
     noStroke();
     if (this.incomingShape.boxX === undefined) {
-      if (this.incomingShape.circleX > width || this.incomingShape.circleX < 0){
+      if (this.incomingShape.circleX > 600 || this.incomingShape.circleX < 0){
         this.incomingShape.speedX = this.incomingShape.speedX * -1;
       }
       this.incomingShape.circleX = this.incomingShape.circleX + this.incomingShape.speedX;
 
-      if (this.incomingShape.circleY > height || this.incomingShape.circleY < 0){
+      if (this.incomingShape.circleY > 600 || this.incomingShape.circleY < 0){
         this.incomingShape.speedY = this.incomingShape.speedY * -1;
       }
       this.incomingShape.circleY = this.incomingShape.circleY + this.incomingShape.speedY;
@@ -307,12 +307,12 @@ class TylerGlass {
     if (this.incomingShape.circleX === undefined) {
       // rectMode(CENTER)
       fill(color(this.incomingShape.color));
-      if(this.incomingShape.boxX > width || this.incomingShape.boxX < 0){
+      if(this.incomingShape.boxX > 600 || this.incomingShape.boxX < 0){
         this.incomingShape.speedX = this.incomingShape.speedX * -1;
       }
       this.incomingShape.boxX = this.incomingShape.boxX + this.incomingShape.speedX;
 
-      if(this.incomingShape.boxY > height || this.incomingShape.boxY < 0){
+      if(this.incomingShape.boxY > 600 || this.incomingShape.boxY < 0){
         this.incomingShape.speedY = this.incomingShape.speedY * -1;
       }
       this.incomingShape.boxY = this.incomingShape.boxY + this.incomingShape.speedY;

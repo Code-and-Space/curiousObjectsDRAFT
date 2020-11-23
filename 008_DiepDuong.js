@@ -335,12 +335,12 @@ class TonyWatch {
   // This is done with a conditional statement. If the JS Object does not have an other the other names, then the JS Object is a rect.
   drawCircle(){
     if (this.incomingShape.boxX === undefined) {
-      if (this.incomingShape.circX > width || this.incomingShape.circX < 0){
+      if (this.incomingShape.circX > 600 || this.incomingShape.circX < 0){
         this.incomingShape.speedX = this.incomingShape.speedX * -1;
       }
       this.incomingShape.circX = this.incomingShape.circX + this.incomingShape.speedX;
 
-      if (this.incomingShape.circY > height || this.incomingShape.circY < 0){
+      if (this.incomingShape.circY > 600 || this.incomingShape.circY < 0){
         this.incomingShape.speedY = this.incomingShape.speedY * -1;
       }
       this.incomingShape.circY = this.incomingShape.circY + this.incomingShape.speedY;
@@ -361,150 +361,3 @@ class TonyWatch {
     }
   }
 }
-
-
-
-
-
-// function drawCircle(incomingCircle){
-//   circle(incomingCircle.circX, incomingCircle.circY,incomingCircle.circWidth,incomingCircle.circHeight)
-//
-// }
-//
-// function drawCircle( incomingCircle){
-//   push()
-//
-//   fill(255, 204, 128);
-//
-//   if (this.incomingShape.circX > width || this.incomingShape.circX < 0){
-//     this.incomingShape.speedX = this.incomingShape.speedX * -1;
-//   }
-//   this.incomingShape.circX = this.incomingShape.circX + this.incomingShape.speedX;
-//
-//   if (this.incomingShape.circY > height || this.incomingShape.circY < 0){
-//     this.incomingShape.speedY = this.incomingShape.speedY * -1;
-//   }
-//   this.incomingShape.circY = this.incomingShape.circY + this.incomingShape.speedY;
-//   translate(this.incomingShape.circX, this.incomingShape.circY)
-//   circle(0,0,this.incomingShape.circWidth)
-//
-//
-//   //Line Rect
-//   trackingLines() {
-//     stroke(255)
-//     line(this.incomingShape.circX, 0, this.incomingShape.circX, height)
-//     line(0, this.incomingShape.circY, width, this.incomingShape.circY)
-//
-//     translate(this.incomingShape.circX, this.incomingShape.circY)
-//     circle(0,0,this.incomingShape.circWidth)
-//
-//
-//   }
-
-
-// }
-
-// class boxMoved{
-//   constructor(incomingShape){
-//     this.incomingShape = incomingShape;
-//   }
-//
-//   drawRect(){
-//     console.log(this.incomingShape.speedX)
-//     push()
-//
-//     fill(255, 204, 128);
-//
-//     if (this.incomingShape.boxX > this.incomingShape.boxXBoundary ||this.incomingShape.boxX < 0){
-//       this.incomingShape.speedX = this.incomingShape.speedX * -1;
-//     }
-//     this.incomingShape.boxX = this.incomingShape.boxX + this.incomingShape.speedX;
-//
-//     if (this.incomingShape.boxY > this.incomingShape.boxYBoundary || this.incomingShape.boxY < 0){
-//       this.incomingShape.speedY = this.incomingShape.speedY * -1;
-//     }
-//     this.incomingShape.boxY = this.incomingShape.boxY + this.incomingShape.speedY;
-//
-//
-//
-//     translate(this.incomingShape.boxX, this.incomingShape.boxY)
-//     rect(0, 0,this.incomingShape.boxWidth,this.incomingShape.boxHeight);
-//     // rect(this.incomingShape.rectX, this.incomingShape.rectY,this.incomingShape.rectWidth,this.incomingShape.rectHeight,this.incomingShape.rectRound)
-//     pop();
-//   }
-
-
-// function drawRect(incomingRect){
-//   push()
-//
-//   fill(255, 204, 128);
-//
-//   if (this.incomingShape.rectX > this.incomingShape.rectWidth ||this.incomingShape.rectX < 0){
-//     this.incomingShape.speedX = this.incomingShape.speedX * -1;
-//   }
-//   this.incomingShape.rectX = this.incomingShape.rectX + this.incomingShape.speedX;
-//
-//   if (this.incomingShape.rectY > this.incomingShape.rectHeight || this.incomingShape.rectY < 0){
-//     this.incomingShape.speedY = incomingRect.speedY * -1;
-//   }
-//   this.incomingShape.rectY = this.incomingShape.rectY + this.incomingShape.speedY;
-
-
-
-//
-// //Line Rect
-// stroke(255)
-// line(incomingRect.rectX, 0, incomingRect.rectX, height)
-// line(0, incomingRect.rectY, width, incomingRect.rectY)
-//
-// translate(incomingRect.rectX, incomingRect.rectY)
-// circle(0,0,incomingRect.rectWidth)
-//
-// pop()
-
-
-// }
-
-// class CircMoved{
-//
-//   constructor(incomingShape){
-//     this.incomingShape = incomingShape;
-//   }
-// }
-
-
-// function drawCircle(incomingCircle){
-//   circle(incomingCircle.circX, incomingCircle.circY,incomingCircle.circWidth,incomingCircle.circHeight)
-//
-// }
-//
-// function drawCircle( incomingCircle){
-//   push()
-//
-//   fill(255, 204, 128);
-//
-//   if (this.incomingShape.circX > width || this.incomingShape.circX < 0){
-//     this.incomingShape.speedX = this.incomingShape.speedX * -1;
-//   }
-//   this.incomingShape.circX = this.incomingShape.circX + this.incomingShape.speedX;
-//
-//   if (this.incomingShape.circY > height || this.incomingShape.circY < 0){
-//     this.incomingShape.speedY = this.incomingShape.speedY * -1;
-//   }
-//   this.incomingShape.circY = this.incomingShape.circY + this.incomingShape.speedY;
-//   translate(this.incomingShape.circX, this.incomingShape.circY)
-//   circle(0,0,this.incomingShape.circWidth)
-//
-//
-//   //Line Rect
-//   trackingLines() {
-//     stroke(255)
-//     line(this.incomingShape.circX, 0, this.incomingShape.circX, height)
-//     line(0, this.incomingShape.circY, width, this.incomingShape.circY)
-//
-//     translate(this.incomingShape.circX, this.incomingShape.circY)
-//     circle(0,0,this.incomingShape.circWidth)
-//
-//
-//   }
-// }

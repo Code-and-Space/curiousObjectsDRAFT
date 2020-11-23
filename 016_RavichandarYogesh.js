@@ -317,12 +317,12 @@ class YogeshSpeaker {
       stroke(this.incomingShape.strokeColor);
       strokeWeight(this.incomingShape.lineweight);
 
-      if (this.incomingShape.X > width || this.incomingShape.X < 0) {
+      if (this.incomingShape.X > 600 || this.incomingShape.X < 0) {
         this.incomingShape.speedX = this.incomingShape.speedX * -1;
       }
       this.incomingShape.X = this.incomingShape.X + this.incomingShape.speedX;
 
-      if (this.incomingShape.Y > height || this.incomingShape.Y < 0) {
+      if (this.incomingShape.Y > 600 || this.incomingShape.Y < 0) {
         this.incomingShape.speedY = this.incomingShape.speedY * -1;
       }
       this.incomingShape.Y = this.incomingShape.Y + this.incomingShape.speedY;
@@ -345,12 +345,12 @@ class YogeshSpeaker {
         noFill();
         stroke(this.incomingShape.strokeColor);
         strokeWeight(this.incomingShape.lineweight);
-        if (this.incomingShape.X > width || this.incomingShape.X < 0) {
+        if (this.incomingShape.X > 600 || this.incomingShape.X < 0) {
           this.incomingShape.speedX = this.incomingShape.speedX * -1;
         }
         this.incomingShape.X = this.incomingShape.X + this.incomingShape.speedX;
 
-        if (this.incomingShape.Y > height || this.incomingShape.Y < 0) {
+        if (this.incomingShape.Y > 600 || this.incomingShape.Y < 0) {
           this.incomingShape.speedY = this.incomingShape.speedY * -1;
         }
         this.incomingShape.Y = this.incomingShape.Y + this.incomingShape.speedY;
@@ -369,12 +369,12 @@ class YogeshSpeaker {
         fill(this.incomingShape.fillColor);
         stroke(this.incomingShape.strokeColor);
         strokeWeight(this.incomingShape.lineweight);
-        if (this.incomingShape.X > width || this.incomingShape.X < 0) {
+        if (this.incomingShape.X > 600 || this.incomingShape.X < 0) {
           this.incomingShape.speedX = this.incomingShape.speedX * -1;
         }
         this.incomingShape.X = this.incomingShape.X + this.incomingShape.speedX;
 
-        if (this.incomingShape.Y > height || this.incomingShape.Y < 0) {
+        if (this.incomingShape.Y > 600 || this.incomingShape.Y < 0) {
           this.incomingShape.speedY = this.incomingShape.speedY * -1;
         }
         this.incomingShape.Y = this.incomingShape.Y + this.incomingShape.speedY;
@@ -399,12 +399,12 @@ class YogeshSpeaker {
       stroke(this.incomingShape.strokeColor);
       strokeWeight(this.incomingShape.lineweight);
 
-      if (this.incomingShape.oneX > width || this.incomingShape.oneX < 0) {
+      if (this.incomingShape.oneX > 600 || this.incomingShape.oneX < 0) {
         this.incomingShape.speedX = this.incomingShape.speedX * -1;
       }
       this.incomingShape.oneX = this.incomingShape.oneX + this.incomingShape.speedX;
 
-      if (this.incomingShape.oneY > height || this.incomingShape.oneY < 0) {
+      if (this.incomingShape.oneY > 600 || this.incomingShape.oneY < 0) {
         this.incomingShape.speedY = this.incomingShape.speedY * -1;
       }
       this.incomingShape.oneY = this.incomingShape.oneY + this.incomingShape.speedY;
@@ -436,66 +436,3 @@ class YogeshSpeaker {
   //   translate(this.incomingShape.X, this.incomingShape.Y)
   // }
 }
-
-
-
-
-
-// function drawBox(outerBox) {
-//   rect(outerBox.X, outerBox.Y, outerBox.Length, outerBox.Breath, outerBox.Radius);
-// }
-//
-// function drawCircle(circleX) {
-//   circle(circleX.X, circleX.Y, circleX.dia);
-// }
-//
-// function drawLines(lineX) {
-//   line(lineX.oneX, lineX.oneY, lineX.twoX, lineX.twoY);
-// }
-
-function moveBox(outerBox) {
-
-  if (outerBox.X > width || outerBox.X < 0) {
-    outerBox.speedX = outerBox.speedX * -1;
-  }
-  outerBox.X = outerBox.X + outerBox.speedX;
-
-  if (outerBox.Y > height || outerBox.Y < 0) {
-    outerBox.speedY = outerBox.speedY * -1;
-  }
-  outerBox.Y = outerBox.Y + outerBox.speedY;
-
-  translate(outerBox.X, outerBox.Y, 50)
-}
-
-function moveCircle(Circles) {
-
-  if (Circles.X > width || Circles.X < 0) {
-    Circles.speedX = Circles.speedX * -1;
-  }
-  Circles.X = Circles.X + Circles.speedX;
-
-  if (Circles.Y > height || Circles.Y < 0) {
-    Circles.speedY = Circles.speedY * -1;
-  }
-  Circles.Y = Circles.Y + Circles.speedY;
-
-  translate(Circles.X, Circles.Y, 50)
-}
-
-function moveLines(lineX) {
-  line(lineX.x + lineX.oneX, lineX.oneY, lineX.x + lineX.twoX, lineX.twoY);
-  if (lineX.x > 100 || lineX.x < 0) {
-    lineX.speedX = lineX.speedX * -1
-  }
-  lineX.x = lineX.x + lineX.speedX
-}
-// function moveHorizontal(lines) {
-
-//   line(X+lines.oneX, lines.oneY,X+ lines.twoX, lines.twoY);
-
-//   if (X > 15 || X < 0) {
-//     speedX = speedX * -1
-//   }
-//   X = X + speedX
-// }

@@ -158,11 +158,11 @@ class YalianaLamp {
       noStroke();
       fill(0)
       push();
-      if(this.incomingShape.rectX > width || this.incomingShape.rectX < 0) {
+      if(this.incomingShape.rectX > 600 || this.incomingShape.rectX < 0) {
         this.incomingShape.speedX = this.incomingShape.speedX * -1;
       }
       this.incomingShape.rectX = this.incomingShape.rectX + this.incomingShape.speedX;
-      if(this.incomingShape.rectY > height || this.incomingShape.rectY < 0){this.incomingShape.speedY = this.incomingShape.speedY * -1;
+      if(this.incomingShape.rectY > 600 || this.incomingShape.rectY < 0){this.incomingShape.speedY = this.incomingShape.speedY * -1;
       }
       this.incomingShape.rectY = this.incomingShape.rectY + this.incomingShape.speedY;
 
@@ -194,11 +194,11 @@ class YalianaLamp {
       stroke ("black");
       strokeWeight (3);
       push();
-      if (this.incomingShape.lineX > width || this.incomingShape.lineX < 0) {
+      if (this.incomingShape.lineX > 600 || this.incomingShape.lineX < 0) {
         this.incomingShape.speedX = this.incomingShape.speedX*-1;
       }
       this.incomingShape.lineX = this.incomingShape.lineX + this.incomingShape.speedX;
-      if (this.incomingShape.lineY > height || this.incomingShape.lineY < 0) {
+      if (this.incomingShape.lineY > 600 || this.incomingShape.lineY < 0) {
         this.incomingShape.speedY = this.incomingShape.speedY*-1;
       }
 

@@ -328,11 +328,11 @@ class MovedFlask {
     // Then I know I am a box
     if (this.incomingShape.ellipseX === undefined && this.incomingShape.arcX === undefined) {
       push();
-      if (this.incomingShape.transX > width || this.incomingShape.transX < 0) {
+      if (this.incomingShape.transX > 600 || this.incomingShape.transX < 0) {
         this.incomingShape.speedX = this.incomingShape.speedX*-1;
       }
       this.incomingShape.transX = this.incomingShape.transX + this.incomingShape.speedX;
-      if (this.incomingShape.transY > width || this.incomingShape.transY < 0) {
+      if (this.incomingShape.transY > 600 || this.incomingShape.transY < 0) {
         this.incomingShape.speedY = this.incomingShape.speedY*-1;
       }
       this.incomingShape.transY = this.incomingShape.transY + this.incomingShape.speedY;
@@ -357,11 +357,11 @@ class MovedFlask {
       fill(this.incomingShape.color); //black
 
       push();
-      if (this.incomingShape.transX > width || this.incomingShape.transX < 0) {
+      if (this.incomingShape.transX > 600 || this.incomingShape.transX < 0) {
         this.incomingShape.speedX = this.incomingShape.speedX*-1;
       }
       this.incomingShape.transX  = this.incomingShape.transX  + this.incomingShape.speedX;
-      if ( this.incomingShape.transY > height ||  this.incomingShape.transY < 0) {
+      if ( this.incomingShape.transY > 600 ||  this.incomingShape.transY < 0) {
         this.incomingShape.speedY = this.incomingShape.speedY*-1;
       }
       this.incomingShape.transY  = this.incomingShape.transY  + this.incomingShape.speedY;
@@ -382,11 +382,11 @@ class MovedFlask {
     if (this.incomingShape.ellipseX === undefined && this.incomingShape.rectX === undefined) {
       fill(this.incomingShape.color);
       push()
-      if (this.incomingShape.transX > width || this.incomingShape.transX  < 0) {
+      if (this.incomingShape.transX > 600 || this.incomingShape.transX  < 0) {
         this.incomingShape.speedX = this.incomingShape.speedX*-1;
       }
       this.incomingShape.transX  = this.incomingShape.transX + this.incomingShape.speedX;
-      if ( this.incomingShape.transY > height ||  this.incomingShape.transY < 0) {
+      if ( this.incomingShape.transY > 600 ||  this.incomingShape.transY < 0) {
         this.incomingShape.speedY = this.incomingShape.speedY*-1;
       }
       this.incomingShape.transY  = this.incomingShape.transY + this.incomingShape.speedY;

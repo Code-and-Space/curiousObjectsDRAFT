@@ -329,39 +329,6 @@ function setup(){
 
     antoineShapesArray[i] = new Drone(antoineShapes[i]);
   }
-
-  // for (let i=0; i < rectangles.length; i++) {
-  //   rectangles[i].speedX = 0;
-  //   rectangles[i].speedY = 0;
-  //   rectangleArray[i] = new Drone(rectangles[i]);
-  // }
-  //
-  // for (let i=0; i < triangles.length; i++) {
-  //   triangles[i].speed = 0;
-  //   triangles[i].angle = 0;
-  //
-  //   // triangles[i].transX = 0;
-  //   // triangles[i].transY = 0;
-  //   triangleArray[i] = new Drone (triangles[i]);
-  //
-  // }
-  //
-  // for (let i=0; i < lines.length; i++) {
-  //   lineArray[i] = new Drone (lines[i]);
-  // }
-  //
-  // for (let i=0; i < circles.length; i++) {
-  //   circles[i].speedX = 0;
-  //   circles[i].speedY = 0;
-  //   circleArray[i] = new Drone (circles[i]);
-  // }
-  //
-  // for (let i=0; i < ellipses.length; i++) {
-  //   ellipses[i].ellipserotate = 0;
-  //   ellipseArray[i] = new Drone (ellipses[i]);
-  // }
-  // console.log(antoineShapes)
-
 }
 
 function draw(){
@@ -380,34 +347,6 @@ function draw(){
     antoineShapesArray[i].tracingCircle();
 
   }
-
-
-
-  // rect(antoineBox1.rectX, antoineBox1.rectY, antoineBox1.rectWidth, antoineBox1.rectHeight)
-
-  // for (let i=0; i < rectangles.length; i++) { // your array name is rectangles, not boxes
-  //   rectangleArray[i].drawbox(); // AC Note: you're missing parenthesis
-  //   rectangleArray[i].tracingBox();
-  // }
-  //
-  // for (let i=0; i < triangles.length; i++) {
-  //   triangleArray[i].drawtriangle();
-  // }
-  //
-  // for (let i=0; i < lines.length; i++) {
-  //   lineArray[i].drawline();
-  // }
-  //
-  // for (let i=0; i < circles.length; i++) {
-  //   circleArray[i].drawcircle();
-  //   circleArray[i].tracingCircle();
-  // }
-  //
-  // for (let i=0; i < ellipses.length; i++) {
-  //   ellipseArray[i].drawellipse();
-  // }
-
-
 }
 
 
@@ -465,14 +404,14 @@ class Drone {
       push();
       fill(0);
       strokeWeight(0)
-      if (this.incomingShape.rectX > width || this.incomingShape.rectX < 0) {
+      if (this.incomingShape.rectX > 600 || this.incomingShape.rectX < 0) {
         // if (this.incomingShape.rectX + this.incomingShape.rectWidth > width || this.incomingShape.rectX < 0) {
 
         this.incomingShape.speedX = this.incomingShape.speedX*-1;
       }
       this.incomingShape.rectX = this.incomingShape.rectX + this.incomingShape.speedX;
 
-      if (this.incomingShape.rectY > height || this.incomingShape.rectY < 0) {
+      if (this.incomingShape.rectY > 600 || this.incomingShape.rectY < 0) {
         // if (this.incomingShape.rectY + this.incomingShape.rectHeight > height || this.incomingShape.rectY < 0) {
 
         this.incomingShape.speedY = this.incomingShape.speedY*-1;
@@ -532,12 +471,12 @@ class Drone {
     if (this.incomingShape.rectX === undefined && this.incomingShape.transX === undefined && this.incomingShape.lineX1 === undefined && this.incomingShape.ellipseTransX === undefined) {
       push()
       strokeWeight(0)
-      if (this.incomingShape.circleX + 22 > width || this.incomingShape.circleX - 22 < 0) {
+      if (this.incomingShape.circleX + 22 > 600 || this.incomingShape.circleX - 22 < 0) {
         this.incomingShape.speedX = this.incomingShape.speedX*-1;
       }
       this.incomingShape.circleX = this.incomingShape.circleX + this.incomingShape.speedX;
 
-      if (this.incomingShape.circleY + 22 > height || this.incomingShape.circleY - 22 < 0) {
+      if (this.incomingShape.circleY + 22 > 600 || this.incomingShape.circleY - 22 < 0) {
         this.incomingShape.speedY = this.incomingShape.speedY*-1;
       }
       this.incomingShape.circleY = this.incomingShape.circleY + this.incomingShape.speedY;

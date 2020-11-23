@@ -295,7 +295,7 @@ function draw() {
 
   noStroke();
   angleMode(DEGREES)
-  fill(255);
+  fill(210);
   rect(0, 0, 600, 600)
   // stroke(0)
   strokeWeight(4);
@@ -342,18 +342,12 @@ function draw() {
 
 
 
-
-
-
-
-
-
   // 015_Ortiz-TeedMiguel
   push();
   translate(800, 400);
   scale(scaleFactor);
   // noFill();
-
+  angleMode(RADIANS);
   noStroke();
   fill(135);
   rect(0, 0, 600, 600)

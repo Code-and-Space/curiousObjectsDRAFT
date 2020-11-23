@@ -80,12 +80,6 @@ let pinkHalfCircle = {
   yspeed: -1,
 }
 
-// I added an xOrigin and yOrigin.
-// When rectX and rectY equal xOrigin and yOrigin, speedX and speedY will equal 0.
-
-// let angle = 0
-// let objectScale = 1
-
 let seed01 = {
   x: 60,
   y: 90,
@@ -264,70 +258,14 @@ let seed07a = {
   yspeed: 1,
 }
 
+let miguelHalfCircles = [greenHalfCircle, whiteHalfCircle, redHalfCircle, pinkHalfCircle];
+let miguelHalfCirclePosition = [];
 let miguelSeeds = [seed01, seed02, seed03, seed04, seed05, seed05a, seed06, seed06a, seed07, seed07a];
 let miguelSeedsPosition = [];
 
-let miguelHalfCircles = [greenHalfCircle, whiteHalfCircle, redHalfCircle, pinkHalfCircle];
-let miguelHalfCirclePosition = [];
-
-
-
-
-
-
-
-// This is to control the time it takes to run a full cycle.
-let miguelSpeedMultiplier = 1;
-
-// function setup() {
-//   createCanvas(600, 600);
-//
-//   for (let i = 0; i < miguelHalfCircles.length; i++){
-//     // Setting your speedX and speedY allows you to just look at the code when every shape is still
-//     // miguelHalfCircles[i].xspeed = 0;
-//     // miguelHalfCircles[i].yspeed = 0;
-//
-//     // This is where your speed multiplier adjusts the speedX and speedY
-//     miguelHalfCircles[i].xspeed = miguelHalfCircles[i].xspeed * miguelSpeedMultiplier;
-//     miguelHalfCircles[i].yspeed = miguelHalfCircles[i].yspeed * miguelSpeedMultiplier;
-//
-//     miguelHalfCirclePosition[i] = new Watermelon(miguelHalfCircles[i]);
-//   }
-//   for (let i = 0; i < miguelSeeds.length; i++){
-//     // Setting your speedX and speedY allows you to just look at the code when every shape is still
-//     // miguelSeeds[i].xspeed = 0;
-//     // miguelSeeds[i].yspeed = 0;
-//
-//     // This is where your speed multiplier adjusts the speedX and speedY
-//     miguelSeeds[i].xspeed = miguelSeeds[i].xspeed * miguelSpeedMultiplier;
-//     miguelSeeds[i].yspeed = miguelSeeds[i].yspeed * miguelSpeedMultiplier;
-//
-//     miguelSeedsPosition[i] = new Seed(miguelSeeds[i]);
-//   }
-// }
-//
-// function draw() {
-//   background(135);
-//   for (i = 0; i < miguelHalfCircles.length; i++){
-//     miguelHalfCirclePosition[i].drawGhostedWatermelon();
-//     miguelHalfCirclePosition[i].drawHalfCircle();
-//     miguelHalfCirclePosition[i].traceObjectGreen();
-//     miguelHalfCirclePosition[i].moveX();
-//     miguelHalfCirclePosition[i].moveY();
-//     miguelHalfCirclePosition[i].returnPosition();
-//   }
-//
-//   for (i = 0; i < miguelSeeds.length; i++){
-//     miguelSeedsPosition[i].drawGhostedSeed();
-//     miguelSeedsPosition[i].drawSeed();
-//     miguelSeedsPosition[i].traceObjectPink();
-//     miguelSeedsPosition[i].moveX();
-//     miguelSeedsPosition[i].moveY();
-//     miguelSeedsPosition[i].returnPosition();
-//   }
-// }
-
-
+let miguelSpeedMultiplier = 2;
+// let angle = 0
+// let objectScale = 1
 
 class Watermelon{
   constructor(saidGeo){
@@ -352,6 +290,7 @@ class Watermelon{
     pop();
 
 
+
   }
 
   traceObjectGreen(){
@@ -365,7 +304,7 @@ class Watermelon{
   }
 
   moveX() {
-    if (this.saidGeo.transX > width || this.saidGeo.transX < 0){
+    if (this.saidGeo.transX > 600 || this.saidGeo.transX < 0){
       this.saidGeo.xspeed = this.saidGeo.xspeed *-1;
     }
     this.saidGeo.transX = this.saidGeo.transX + this.saidGeo.xspeed;
@@ -373,7 +312,7 @@ class Watermelon{
 
 
   moveY(){
-    if (this.saidGeo.transY > height || this.saidGeo.transY < 0){
+    if (this.saidGeo.transY > 600 || this.saidGeo.transY < 0){
       this.saidGeo.yspeed = this.saidGeo.yspeed *-1;
     }
     this.saidGeo.transY = this.saidGeo.transY + this.saidGeo.yspeed;
@@ -386,6 +325,10 @@ class Watermelon{
     }
   }
 }
+
+
+
+
 
 
 class Seed {
@@ -425,14 +368,14 @@ class Seed {
   }
 
   moveX() {
-    if (this.saidGeo.transX > width || this.saidGeo.transX < 0){
+    if (this.saidGeo.transX > 600 || this.saidGeo.transX < 0){
       this.saidGeo.xspeed = this.saidGeo.xspeed *-1;
     }
     this.saidGeo.transX = this.saidGeo.transX + this.saidGeo.xspeed;
   }
 
   moveY(){
-    if (this.saidGeo.transY > height || this.saidGeo.transY < 0){
+    if (this.saidGeo.transY > 600 || this.saidGeo.transY < 0){
       this.saidGeo.yspeed = this.saidGeo.yspeed *-1;
     }
     this.saidGeo.transY = this.saidGeo.transY + this.saidGeo.yspeed;

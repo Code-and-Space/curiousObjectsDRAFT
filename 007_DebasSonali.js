@@ -364,11 +364,11 @@ class SonaliSanitizer {
     strokeWeight(this.incomingBox.boxStrokeWeight);
     fill(this.incomingBox.color);
 
-    if (this.incomingBox.transX > width || this.incomingBox.transX < 0) {
+    if (this.incomingBox.transX > 600 || this.incomingBox.transX < 0) {
       this.incomingBox.speedX = this.incomingBox.speedX*-1;
     }
     this.incomingBox.transX = this.incomingBox.transX + this.incomingBox.speedX;
-    if (this.incomingBox.transY > width || this.incomingBox.transY < 0) {
+    if (this.incomingBox.transY > 600 || this.incomingBox.transY < 0) {
       this.incomingBox.speedY = this.incomingBox.speedY*-1;
     }
     this.incomingBox.transY = this.incomingBox.transY + this.incomingBox.speedY;

@@ -132,12 +132,12 @@ class Aishwarya {
   drawBox() {
     fill(this.incomingShape.color); // white
     if (this.incomingShape.circleX === undefined) {
-      if(this.incomingShape.rectX > width || this.incomingShape.rectX < 0) {
+      if(this.incomingShape.rectX > 600 || this.incomingShape.rectX < 0) {
         this.incomingShape.speedX = this.incomingShape.speedX*-1;
       }
       this.incomingShape.rectX = this.incomingShape.rectX + this.incomingShape.speedX;
 
-      if(this.incomingShape.rectY > height || this.incomingShape.rectY < 0) {
+      if(this.incomingShape.rectY > 600 || this.incomingShape.rectY < 0) {
         this.incomingShape.speedY = this.incomingShape.speedY*-1;
       }
 
@@ -155,12 +155,12 @@ class Aishwarya {
   drawCircle() {
     if (this.incomingShape.rectX === undefined) {
       fill(this.incomingShape.color); // white
-      if(this.incomingShape.circleX >  height || this.incomingShape.circleX < 0){
+      if(this.incomingShape.circleX >  600 || this.incomingShape.circleX < 0){
         this.incomingShape.speedX = this.incomingShape.speedX* - 1;
       }
       this.incomingShape.circleX = this.incomingShape.circleX + this.incomingShape.speedX;
 
-      if(this.incomingShape.circleY > width || this.incomingShape.circleY < 0){
+      if(this.incomingShape.circleY > 600 || this.incomingShape.circleY < 0){
         this.incomingShape.speedY = this.incomingShape.speedY* - 1;
       }
       this.incomingShape.circleY = this.incomingShape.circleY + this.incomingShape.speedY;

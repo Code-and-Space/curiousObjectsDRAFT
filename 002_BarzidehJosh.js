@@ -180,7 +180,7 @@ let joshShapeList = [joshCircle01a, joshCircle02a, joshRect01a, joshRect02a, jos
 let joshShapeArray = [];
 
 // This is to control the time it takes to run a full cycle.
-let joshSpeedMultiplier = 2;
+let joshSpeedMultiplier = 1;
 
 // function setup() {
 //   createCanvas(600, 600);
@@ -270,11 +270,11 @@ class JoshMovedShapes{
     // In drawing a circle, I have to make sure the object is not a rectangle.
     // This is done with a conditional statement. If the JS Object does not have an rectX, then the JS Object is a box.
     if(this.inputGeo.rectX === undefined){
-      if (this.inputGeo.circleX > width || this.inputGeo.circleX < 0) {
+      if (this.inputGeo.circleX > 600 || this.inputGeo.circleX < 0) {
         this.inputGeo.speedX = this.inputGeo.speedX*-1;
       }
       this.inputGeo.circleX = this.inputGeo.circleX + this.inputGeo.speedX;
-      if (this.inputGeo.circleY > width || this.inputGeo.circleY < 0) {
+      if (this.inputGeo.circleY > 600 || this.inputGeo.circleY < 0) {
         this.inputGeo.speedY = this.inputGeo.speedY*-1;
       }
       this.inputGeo.circleY = this.inputGeo.circleY + this.inputGeo.speedY;
@@ -301,11 +301,11 @@ class JoshMovedShapes{
     // In drawing a rectangle, I have to make sure the object is not a circle.
     // This is done with a conditional statement. If the JS Object does not have an circleX, then the JS Object is a box.
     if (this.inputGeo.circleX === undefined) {
-      if (this.inputGeo.rectX > width || this.inputGeo.rectX < 0) {
+      if (this.inputGeo.rectX > 600 || this.inputGeo.rectX < 0) {
         this.inputGeo.speedX = this.inputGeo.speedX*-1;
       }
       this.inputGeo.rectX = this.inputGeo.rectX + this.inputGeo.speedX;
-      if (this.inputGeo.rectX > width || this.inputGeo.rectX < 0) {
+      if (this.inputGeo.rectX > 600 || this.inputGeo.rectX < 0) {
         this.inputGeo.speedY = this.inputGeo.speedY*-1;
       }
       this.inputGeo.rectY = this.inputGeo.rectY + this.inputGeo.speedY;
