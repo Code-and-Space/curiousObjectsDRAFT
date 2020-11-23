@@ -1,4 +1,4 @@
-let scaleFactor = 0.34;
+let scaleFactor = 0.333;
 
 function draw() {
   background(200);
@@ -30,7 +30,7 @@ function draw() {
     iPhoneComponentsClassArray[i].drawGhostedPhone();
     iPhoneComponentsClassArray[i].drawShape();
     iPhoneComponentsClassArray[i].animateShape();
-    iPhoneComponentsClassArray[i].showTrackers();
+    // iPhoneComponentsClassArray[i].showTrackers();
   }
   pop();
 
@@ -55,6 +55,7 @@ function draw() {
   pop();
 
 
+
   // 003_BeerseTyler
   push();
   rectMode(CORNER);
@@ -74,6 +75,7 @@ function draw() {
   pop();
 
 
+
   // 004_ClearyThomas
   push();
   rectMode(CORNER);
@@ -90,14 +92,13 @@ function draw() {
     tomShapeArray01[i].drawCircle();
     tomShapeArray01[i].drawArc();
     tomShapeArray01[i].moveShape();
-    tomShapeArray01[i].traceObject();
+    // tomShapeArray01[i].traceObject();
   }
-
   pop();
 
 
-  // 005_CopeteCamilo
 
+  // 005_CopeteCamilo
   push();
   translate(800, 0);
   scale(scaleFactor);
@@ -278,7 +279,7 @@ function draw() {
   for (let i = 0; i < flaskElements.length; i++) {
     flaskArray[i].drawGhostedBottle();
     flaskArray[i].moveBox();
-    flaskArray[i].trackingLines();
+    // flaskArray[i].trackingLines();
     flaskArray[i].drawCircle();
     flaskArray[i].drawArc();
   }
@@ -360,7 +361,7 @@ function draw() {
   for (i = 0; i < miguelHalfCircles.length; i++){
     miguelHalfCirclePosition[i].drawGhostedWatermelon();
     miguelHalfCirclePosition[i].drawHalfCircle();
-    miguelHalfCirclePosition[i].traceObjectGreen();
+    // miguelHalfCirclePosition[i].traceObjectGreen();
     miguelHalfCirclePosition[i].moveX();
     miguelHalfCirclePosition[i].moveY();
     miguelHalfCirclePosition[i].returnPosition();
@@ -369,12 +370,13 @@ function draw() {
   for (i = 0; i < miguelSeeds.length; i++){
     miguelSeedsPosition[i].drawGhostedSeed();
     miguelSeedsPosition[i].drawSeed();
-    miguelSeedsPosition[i].traceObjectPink();
+    // miguelSeedsPosition[i].traceObjectPink();
     miguelSeedsPosition[i].moveX();
     miguelSeedsPosition[i].moveY();
     miguelSeedsPosition[i].returnPosition();
   }
   pop();
+
 
 
   // 016_RavichandarYogesh
@@ -395,105 +397,92 @@ function draw() {
     yogeshArray[i].drawLines();
     // yogeshArray[i].moveBox();
   }
-
   pop();
 
-// 017_SachaMatthew
-push();
-translate(200, 600);
-scale(scaleFactor);
-// noFill();
-
-noStroke();
-fill(0);
-rect(0, 0, 600, 600);
-rectMode(CORNER);
-
-for (let i = 0; i < mattShapesArray.length; i++) {
-  mattShapesArray[i].moveCircle();
-  mattShapesArray[i].moveRect();
-  mattShapesArray[i].moveArc();
-  // mattShapesArray[i].diagramMovement();
-  mattShapesArray[i].drawGhostedHeadphones();
-  // rectArray[i].trackingLines();
-}
-
-pop();
 
 
+  // 017_SachaMatthew
+  push();
+  translate(200, 600);
+  scale(scaleFactor);
+  // noFill();
 
+  noStroke();
+  fill(0);
+  rect(0, 0, 600, 600);
+  rectMode(CORNER);
 
-// 018_SatputeYukta
-push();
-translate(400, 600);
-scale(scaleFactor);
-// noFill();
-
-noStroke();
-fill(250);
-rect(0, 0, 600, 600);
-rectMode(CORNER);
-
-for (let i = 0; i < yuktaShapesArray.length; i++) {
-  yuktaShapesArray[i].drawCircle();
-  yuktaShapesArray[i].drawLine();
-}
-
-pop();
-
-
-// 019_VyawahareAishwarya
-push();
-translate(600, 600);
-scale(scaleFactor);
-// noFill();
-
-noStroke();
-fill(0);
-rect(0, 0, 600, 600);
-rectMode(CORNER);
-
-for (let i = 0; i < aishwaryaShapes.length; i++) {
-  aishwaryaShapesArray[i].drawGhostedMouse();
-  aishwaryaShapesArray[i].drawBox();
-  aishwaryaShapesArray[i].drawCircle();
-  // shapesArray[i].moveShape();
-  aishwaryaShapesArray[i].traceObject();
-}
-
-pop();
+  for (let i = 0; i < mattShapesArray.length; i++) {
+    mattShapesArray[i].moveCircle();
+    mattShapesArray[i].moveRect();
+    mattShapesArray[i].moveArc();
+    // mattShapesArray[i].diagramMovement();
+    mattShapesArray[i].drawGhostedHeadphones();
+    // rectArray[i].trackingLines();
+  }
+  pop();
 
 
 
+  // 018_SatputeYukta
+  push();
+  translate(400, 600);
+  scale(scaleFactor);
+  // noFill();
 
+  noStroke();
+  fill(250);
+  rect(0, 0, 600, 600);
+  rectMode(CORNER);
 
-// 020_ZhangXuwen
-push();
-translate(800, 600);
-scale(scaleFactor);
-// noFill();
-
-// angleMode(RADIANS)
-noStroke();
-fill(200,200,240);
-rect(0, 0, 600, 600);
-rectMode(CORNER);
-
-for (let i= 0; i< xuwenArray.length; i++){
-  xuwenArray[i].drawGhostedLamp();
-  xuwenArray[i].drawBox();
-  xuwenArray[i].drawCircle();
-  xuwenArray[i].drawTriangle();
-  xuwenArray[i].tracingObject();
-}
-
-pop();
+  for (let i = 0; i < yuktaShapesArray.length; i++) {
+    yuktaShapesArray[i].drawCircle();
+    yuktaShapesArray[i].drawLine();
+  }
+  pop();
 
 
 
+  // 019_VyawahareAishwarya
+  push();
+  translate(600, 600);
+  scale(scaleFactor);
+  // noFill();
+
+  noStroke();
+  fill(0);
+  rect(0, 0, 600, 600);
+  rectMode(CORNER);
+
+  for (let i = 0; i < aishwaryaShapes.length; i++) {
+    aishwaryaShapesArray[i].drawGhostedMouse();
+    aishwaryaShapesArray[i].drawBox();
+    aishwaryaShapesArray[i].drawCircle();
+    // shapesArray[i].moveShape();
+    // aishwaryaShapesArray[i].traceObject();
+  }
+  pop();
 
 
 
+  // 020_ZhangXuwen
+  push();
+  translate(800, 600);
+  scale(scaleFactor);
+  // noFill();
 
+  // angleMode(RADIANS)
+  noStroke();
+  fill(200, 200, 240);
+  rect(0, 0, 600, 600);
+  rectMode(CORNER);
 
+  for (let i= 0; i< xuwenArray.length; i++){
+    xuwenArray[i].drawGhostedLamp();
+    xuwenArray[i].drawBox();
+    xuwenArray[i].drawCircle();
+    xuwenArray[i].drawTriangle();
+    // xuwenArray[i].tracingObject();
+  }
+  pop();
 }

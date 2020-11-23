@@ -279,7 +279,7 @@ let xuwenLampShapes = [xuwenBox01,xuwenBox02,xuwenBox03,xuwenBox04,xuwenBox05,xu
 let xuwenArray = [];
 
 // This is to control the time it takes to run a full cycle.
-let xuwenSpeedMultiplier = 2.5;
+let xuwenSpeedMultiplier = 1;
 
 
 
@@ -362,11 +362,11 @@ class XuwenLamp {
   drawBox() {
     if (this.incomingShape.circleX === undefined && this.incomingShape.triangleX1 === undefined) {
       push();
-      if (this.incomingShape.boxX > width || this.incomingShape.boxX < 0) {
+      if (this.incomingShape.boxX > 600 || this.incomingShape.boxX < 0) {
         this.incomingShape.speedX = this.incomingShape.speedX*-1;
       }
       this.incomingShape.boxX = this.incomingShape.boxX + this.incomingShape.speedX;
-      if (this.incomingShape.boxY > height || this.incomingShape.boxY < 0) {
+      if (this.incomingShape.boxY > 600 || this.incomingShape.boxY < 0) {
         this.incomingShape.speedY = this.incomingShape.speedY*-1;
       }
       this.incomingShape.boxY = this.incomingShape.boxY + this.incomingShape.speedY;
@@ -397,7 +397,7 @@ class XuwenLamp {
 
       this.incomingShape.circleX = this.incomingShape.circleX + this.incomingShape.speedX;
 
-      if (this.incomingShape.circleY > height || this.incomingShape.circleY < 0) {
+      if (this.incomingShape.circleY > 600 || this.incomingShape.circleY < 0) {
         this.incomingShape.speedY = this.incomingShape.speedY*-1;
       }
 
@@ -423,14 +423,14 @@ class XuwenLamp {
       push()
       rotate(xuwenAngle);
       xuwenAngle = xuwenAngle + xuwenSpeed;
-      if (this.incomingShape.triangleX1 > width || this.incomingShape.triangleX1 < 0 || this.incomingShape.triangleX2 > width || this.incomingShape.triangleX2 < 0 || this.incomingShape.triangleX3 > width || this.incomingShape.triangleX3 < 0 ) {
+      if (this.incomingShape.triangleX1 > 600 || this.incomingShape.triangleX1 < 0 || this.incomingShape.triangleX2 > 600 || this.incomingShape.triangleX2 < 0 || this.incomingShape.triangleX3 > 600 || this.incomingShape.triangleX3 < 0 ) {
         this.incomingShape.speedX = this.incomingShape.speedX*-1;
       }
       this.incomingShape.triangleX1 = this.incomingShape.triangleX1 + this.incomingShape.speedX;
       this.incomingShape.triangleX2 = this.incomingShape.triangleX2 + this.incomingShape.speedX;
       this.incomingShape.triangleX3 = this.incomingShape.triangleX3 + this.incomingShape.speedX;
 
-      if (this.incomingShape.triangleY1 > width || this.incomingShape.triangleY1 < 0 || this.incomingShape.triangleY2 > width || this.incomingShape.triangleY2 < 0 || this.incomingShape.triangleY3 > width || this.incomingShape.triangleY3 < 0) {
+      if (this.incomingShape.triangleY1 > 600 || this.incomingShape.triangleY1 < 0 || this.incomingShape.triangleY2 > 600 || this.incomingShape.triangleY2 < 0 || this.incomingShape.triangleY3 > 600 || this.incomingShape.triangleY3 < 0) {
         this.incomingShape.speedY = this.incomingShape.speedY*-1;
       }
       this.incomingShape.triangleY1 = this.incomingShape.triangleY1 + this.incomingShape.speedY;
@@ -442,14 +442,14 @@ class XuwenLamp {
 
 
       // At some point, the speed and angle need to return back to 0 to get the drawing to stop. This is one method to do it.
-      if (angle.toFixed(2) > 40) {
+      if (xuwenAngle.toFixed(2) > 40) {
         xuwenSpeed = 0;
         xuwenAngle = 0;
       }
       // console.log(angle.toFixed(2));
 
       // Below, if the values are equal again, then stop (speedX and speedY = 0).
-      if (this.incomingShape.triangleX1 === this.incomingShape.originX1 && this.incomingShape.triangleY1 === this.incomingShape.originY1 && (angle % 360) === 0) {
+      if (this.incomingShape.triangleX1 === this.incomingShape.originX1 && this.incomingShape.triangleY1 === this.incomingShape.originY1 && (xuwenAngle % 360) === 0) {
         this.incomingShape.speedX = 0;
         this.incomingShape.speedY = 0;
         xuwenSpeed = 0;
@@ -461,7 +461,7 @@ class XuwenLamp {
     if (this.incomingShape.circleX === undefined && this.incomingShape.triangleX1 === undefined) {
       stroke(255, 255, 255, 50)
       line(this.incomingShape.boxX, 0, this.incomingShape.boxX, height)
-      line(0, this.incomingShape.boxY, width, this.incomingShape.boxY)
+      line(0, this.incomingShape.boxY, 600, this.incomingShape.boxY)
     }
 
     if (this.incomingShape.triangleX === undefined && this.incomingShape.boxX === undefined) {

@@ -83,8 +83,8 @@ let pinkHalfCircle = {
 // I added an xOrigin and yOrigin.
 // When rectX and rectY equal xOrigin and yOrigin, speedX and speedY will equal 0.
 
-let angle = 0
-let objectScale = 1
+// let angle = 0
+// let objectScale = 1
 
 let seed01 = {
   x: 60,
