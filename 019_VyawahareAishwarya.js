@@ -78,12 +78,12 @@ let aishwaryaShapes = [aishwaryaBox01, aishwaryaBox02, aishwaryaBox03, aishwarya
 let aishwaryaShapesArray = [];
 
 // This is to control the time it takes to run a full cycle.
-let aishwaryaSpeedMultiplier = 10;
+let aishwaryaSpeedMultiplier = 1;
 
 function setup() {
   createCanvas(600, 600);
   for (let i = 0; i < shapes.length;i++) {
-        // Setting your speedX and speedY allows you to just look at the code when every shape is still
+    // Setting your speedX and speedY allows you to just look at the code when every shape is still
     // shapes[i].speedX = 0;
     // shapes[i].speedY = 0;
 
@@ -188,4 +188,21 @@ class Aishwarya {
       line(0, this.incomingShape.circleY, width, this.incomingShape.circleY);
     }
   }
+
+  resetMovement() {
+    if (this.incomingShape.circleX === undefined) {
+      if (this.incomingShape.rectX === this.incomingShape.originX && this.incomingShape.rectY === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+    if (this.incomingShape.rectX === undefined) {
+      if (this.incomingShape.circleX === this.incomingShape.originX && this.incomingShape.circleY === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+
+  }
+
 }

@@ -311,10 +311,11 @@ class JoshMovedShapes{
       this.inputGeo.rectY = this.inputGeo.rectY + this.inputGeo.speedY;
     }
     // Below, if the values are equal again, then stop (speedX and speedY = 0).
-    if (this.inputGeo.rectX === this.inputGeo.originX && this.inputGeo.rectY === this.inputGeo.originY) {
+    if (parseInt(this.inputGeo.rectX) === this.inputGeo.originX && parseInt(this.inputGeo.rectY) === this.inputGeo.originY) {
       this.inputGeo.speedX = 0;
       this.inputGeo.speedY = 0;
     }
+    // console.log(parseInt(this.inputGeo.rectX))
   }
 
   trackingLines() {
@@ -328,7 +329,23 @@ class JoshMovedShapes{
       line(0, this.inputGeo.circleY, height, this.inputGeo.circleY)
     }
   }
+
+  resetMovement() {
+    if (this.inputGeo.circleX === undefined) {
+      if (parseInt(this.inputGeo.rectX) === this.inputGeo.originX && parseInt(this.inputGeo.rectY) === this.inputGeo.originY) {
+        this.inputGeo.speedX = getRandomInt(1, 10) * joshSpeedMultiplier;
+        this.inputGeo.speedY = getRandomInt(1, 10) * joshSpeedMultiplier;
+      }
+    }
+    if(this.inputGeo.rectX === undefined){
+      if (this.inputGeo.circleX === this.inputGeo.originX && this.inputGeo.circleY === this.inputGeo.originY) {
+        this.inputGeo.speedX = getRandomInt(-10, 10) * joshSpeedMultiplier;
+        this.inputGeo.speedY = getRandomInt(-10, 10) * joshSpeedMultiplier;
+      }
+    }
+  }
 }
+
 
 // class Circle{
 //   constructor(inputGeo) {

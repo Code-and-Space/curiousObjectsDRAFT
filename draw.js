@@ -108,7 +108,7 @@ function draw() {
   rect(0, 0, 600, 600)
 
   rectMode(CENTER);
-  for (i=0; i < camiloShapesPosition.length; i++) {
+  for (let i = 0; i < camiloShapesPosition.length; i++) {
     camiloShapesPosition[i].drawKendamaGhosted();
     camiloShapesPosition[i].moveRectangle();
     // camiloShapesPosition[i].tracingRectangles();
@@ -130,7 +130,6 @@ function draw() {
 
 
   // 006_CornetAntoine
-
   push();
   angleMode(RADIANS);
   translate(0, 200);
@@ -151,16 +150,12 @@ function draw() {
 
     // antoineShapesArray[i].tracingBox();
     // antoineShapesArray[i].tracingCircle();
-
   }
   pop();
 
 
 
-
   // 007_DebasSonali
-
-
   push();
   translate(200, 200);
   scale(scaleFactor);
@@ -179,9 +174,7 @@ function draw() {
 
 
 
-
   // 008_DiepDuong
-
   push();
   translate(400, 200);
   scale(scaleFactor);
@@ -198,10 +191,8 @@ function draw() {
   pop();
 
 
+
   // 009_HernandezYaliana
-
-
-
   push();
   translate(600, 200);
   scale(scaleFactor);
@@ -223,7 +214,6 @@ function draw() {
 
 
   // 010_JonesJamie
-
   push();
   translate(800, 200);
   scale(scaleFactor);
@@ -266,6 +256,7 @@ function draw() {
   pop();
 
 
+
   // 012_MytculAnna
   push();
   translate(200, 400);
@@ -274,7 +265,7 @@ function draw() {
   noStroke();
   fill(220);
   rect(0, 0, 600, 600)
-
+  angleMode(RADIANS)
   rectMode(CENTER)
   for (let i = 0; i < flaskElements.length; i++) {
     flaskArray[i].drawGhostedBottle();
@@ -321,6 +312,7 @@ function draw() {
   pop();
 
 
+
   // 014_NyeZoe
   push();
   translate(600, 400);
@@ -358,7 +350,7 @@ function draw() {
     // miguelHalfCirclePosition[i].traceObjectGreen();
     miguelHalfCirclePosition[i].moveX();
     miguelHalfCirclePosition[i].moveY();
-    miguelHalfCirclePosition[i].returnPosition();
+    // miguelHalfCirclePosition[i].returnPosition();
   }
 
   for (i = 0; i < miguelSeeds.length; i++){
@@ -412,7 +404,7 @@ function draw() {
     mattShapesArray[i].moveArc();
     // mattShapesArray[i].diagramMovement();
     mattShapesArray[i].drawGhostedHeadphones();
-    // rectArray[i].trackingLines();
+    // mattShapesArray[i].trackingLines();
   }
   pop();
 
@@ -470,7 +462,6 @@ function draw() {
   fill(200, 200, 240);
   rect(0, 0, 600, 600);
   rectMode(CORNER);
-
   for (let i= 0; i< xuwenArray.length; i++){
     xuwenArray[i].drawGhostedLamp();
     xuwenArray[i].drawBox();
@@ -479,4 +470,113 @@ function draw() {
     // xuwenArray[i].tracingObject();
   }
   pop();
+}
+
+function mouseClicked() {
+  // 001_AgrawalAnubha
+  for (let i = 0; i < iPhoneComponentsClassArray.length; i++) {
+    iPhoneComponentsClassArray[i].resetMovement();
+  }
+
+  // 002_BarzidehJosh
+  for (let i = 0; i < joshShapeArray.length; i++) {
+    joshShapeArray[i].resetMovement();
+  }
+
+  // 003_BeerseTyler
+  for (let i = 0; i < tylerShapesArray.length; i++) {
+    tylerShapesArray[i].resetMovement();
+  }
+
+  // 004_ClearyThomas
+  for (let i = 0; i < tomShapes01.length; i++) {
+    tomShapeArray01[i].resetMovement();
+  }
+
+  // 005_CopeteCamilo
+  for (let i = 0; i < camiloShapesPosition.length; i++) {
+    camiloShapesPosition[i].resetMovement();
+  }
+
+  // 006_CornetAntoine
+  for (let i=0; i < antoineShapesArray.length; i++) { // your array name is rectangles, not boxes
+    antoineShapesArray[i].resetMovement();
+  }
+
+  // 007_DebasSonali
+  for (i = 0; i < sonaliBoxes.length; i++) {
+    sonaliBoxPosition[i].resetMovement();
+  }
+
+  // 008_DiepDuong
+  for (let i = 0; i < tonyShapesArray.length; i++){
+    tonyShapesArray[i].resetMovement();
+  }
+
+  // 009_HernandezYaliana
+  for (i=0; i < yalianaShapesArray.length; i++) {
+    yalianaShapesArray[i].resetMovement();
+  }
+
+  // 010_JonesJamie
+  for (let i = 0; i < jamieShapesArray.length; i++) {
+    jamieShapesArray[i].resetMovement();
+  }
+
+  // 011_KarimRukaiya
+  for (i = 0; i < karimShapes.length; i++) {
+    karimShapePosition[i].resetMovement();
+  }
+
+  // 012_MytculAnna
+  for (let i = 0; i < flaskElements.length; i++) {
+    flaskArray[i].resetMovement();
+  }
+
+  // 013_NazirSakeena
+
+  // 014_NyeZoe
+  for (i = 0; i < zoeShapes.length; i++) {
+    zoeShapesPosition[i].resetMovement();
+  }
+
+  // 015_Ortiz-TeedMiguel
+  for (i = 0; i < miguelHalfCircles.length; i++){
+    miguelHalfCirclePosition[i].resetMovement();
+  }
+  for (i = 0; i < miguelSeeds.length; i++){
+    miguelSeedsPosition[i].resetMovement();
+  }
+
+  // 016_RavichandarYogesh
+  for (let i = 0; i < yogeshArray.length; i++) {
+    yogeshArray[i].resetMovement();
+  }
+
+  // 017_SachaMatthew
+  for (let i = 0; i < mattShapesArray.length; i++) {
+    mattShapesArray[i].resetMovement();
+  }
+
+  // 018_SatputeYukta
+  for (let i = 0; i < yuktaShapesArray.length; i++) {
+    // yuktaShapesArray[i].resetMovement();
+  }
+
+  // 019_VyawahareAishwarya
+  for (let i = 0; i < aishwaryaShapes.length; i++) {
+    aishwaryaShapesArray[i].resetMovement();
+  }
+
+  // 020_ZhangXuwen
+  for (let i= 0; i< xuwenArray.length; i++){
+    xuwenArray[i].resetMovement();
+  }
+
+}
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 }

@@ -18,8 +18,6 @@ function setup() {
 
 
 
-
-
   // 002_BarzidehJosh
   for (let i = 0; i < joshShapeList.length; i++) {
     // speedMultiplier is adjusting your speedX and speedY
@@ -34,11 +32,11 @@ function setup() {
   }
 
 
+
   // 003_BeerseTyler
   for (let i = 0; i < tylerShapes.length; i++) {
     // tylerShapes[i].speedX = 0;
     // tylerShapes[i].speedY = 0;
-
 
     // This is where your speed multiplier adjusts the speedX and speedY
     tylerShapes[i].speedX = tylerShapes[i].speedX * tylerSpeedMultiplier;
@@ -46,6 +44,7 @@ function setup() {
 
     tylerShapesArray[i] = new TylerGlass(tylerShapes[i]);
   }
+
 
 
   // 004_ClearyThomas
@@ -60,8 +59,8 @@ function setup() {
   }
 
 
-  // 005_CopeteCamilo
 
+  // 005_CopeteCamilo
   for (i=0; i < camiloShapes.length; i++) {
     camiloShapes[i].speedX = camiloShapes[i].speedX * speedCamiloMultiplier;
     camiloShapes[i].speedY = camiloShapes[i].speedY * speedCamiloMultiplier;
@@ -69,6 +68,7 @@ function setup() {
     // camiloShapes[i].speedY = 0;
     camiloShapesPosition[i] = new CamiloKendama(camiloShapes[i]);
   }
+
 
 
   // 006_CornetAntoine
@@ -94,6 +94,7 @@ function setup() {
   }
 
 
+
   // 007_DebasSonali
   for (let i = 0; i < sonaliBoxes.length; i++) {
     // This is where your speed multiplier adjusts the speedX and speedY
@@ -108,9 +109,9 @@ function setup() {
   }
 
 
+
 // 008_DiepDuong
 for (let i=0;i < tonyShapes.length;i++){
-
   // Setting your speedX and speedY allows you to just look at the code when every shape is still
   // tonyShapes[i].speedX = 0;
   // tonyShapes[i].speedY = 0;
@@ -125,9 +126,6 @@ for (let i=0;i < tonyShapes.length;i++){
 
 
 // 009_HernandezYaliana
-
-
-
 for (i=0; i < yalianaShapes.length; i++) {
   // speedMultiplier is adjusting your speedX and speedY
   yalianaShapes[i].speedX = yalianaShapes[i].speedX * speedMultiplier;
@@ -138,9 +136,7 @@ for (i=0; i < yalianaShapes.length; i++) {
 
 
 // 010_JonesJamie
-
 for (let i = 0; i < jamieShapes.length; i++) {
-
   // Stop moving to ensure guitar is drawing correctly
   // if (jamieShapes[i].rectX === undefined && jamieShapes[i].x1 === undefined) {
   //   jamieShapes[i].speedX = 0;
@@ -171,9 +167,7 @@ for (let i = 0; i < jamieShapes.length; i++) {
 
 
 
-
 // 011_KarimRukaiya
-
 for (let i = 0; i < karimShapes.length; i++) {
   // Setting your speedX and speedY allows you to just look at the code when every shape is still
   // karimShapes[i].speedX = 0;
@@ -198,10 +192,9 @@ for (let i = 0; i < karimShapes.length; i++) {
 }
 
 
+
 // 012_MytculAnna
-
 for (let i = 0; i < flaskElements.length; i++) {
-
   // Setting your speedX and speedY allows you to just look at the code when every shape is still
   // flaskElements[i].speedX = 0;
   // flaskElements[i].speedY = 0;
@@ -212,6 +205,7 @@ for (let i = 0; i < flaskElements.length; i++) {
 
   flaskArray[i] = new MovedFlask (flaskElements[i]);
 }
+
 
 
 // 013_NazirSakeena
@@ -227,6 +221,7 @@ for (i = 0; i < zoeShapes.length; i++) {
   zoeShapes[i].speedResetY = zoeShapes[i].speedResetY * speedMultiplier;
   zoeShapesPosition[i] = new Mirror_Zoe(zoeShapes[i]);
 }
+
 
 
 // 015_Ortiz-TeedMiguel
@@ -264,7 +259,6 @@ for (let i = 0; i < yogeshShapesArray.length; i++) {
 
 
 
-
 // 017_SachaMatthew
 for (let i = 0; i < mattShapes.length; i++) {
   // mattShapes[i].speedX = 0;
@@ -277,11 +271,11 @@ for (let i = 0; i < mattShapes.length; i++) {
 }
 
 
+
 // 018_SatputeYukta
 for (let i = 0; i < yuktaShapes.length; i++) {
   yuktaShapesArray[i] = new YuktaClock(yuktaShapes[i]);
 }
-
 
 
 
@@ -299,9 +293,9 @@ for (let i = 0; i < aishwaryaShapes.length;i++) {
 }
 
 
+
 // 020_ZhangXuwen
   for (let i= 0; i < xuwenLampShapes.length; i++){
-
     // This is where your speed multiplier adjusts the speedX and speedY
     xuwenLampShapes[i].speedX = xuwenLampShapes[i].speedX * xuwenSpeedMultiplier;
     xuwenLampShapes[i].speedY = xuwenLampShapes[i].speedY * xuwenSpeedMultiplier;
@@ -313,8 +307,4 @@ for (let i = 0; i < aishwaryaShapes.length;i++) {
 
     xuwenArray[i] = new XuwenLamp(xuwenLampShapes[i]);
   }
-
-
-
-
 }

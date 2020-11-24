@@ -399,4 +399,12 @@ class SonaliSanitizer {
     line(this.incomingBox.transX, 0,this.incomingBox.transX, height)
     line(0, this.incomingBox.transY, height, this.incomingBox.transY)
   }
+
+  resetMovement() {
+    if (this.incomingBox.transX === this.incomingBox.originX && this.incomingBox.transY === this.incomingBox.originY) {
+      this.incomingBox.speedX = getRandomInt(-10, 10);
+      this.incomingBox.speedY = getRandomInt(-10, 10);
+    }
+  }
+
 }

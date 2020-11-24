@@ -168,7 +168,7 @@ let zoeShapes = [zoeCircle01, zoeBox02, zoeCircle03, zoeCircle04, zoeBox05, zoeC
 let zoeShapesPosition = [];
 
 // This is to control the time it takes to run a full cycle.
-let zoeSpeedMultiplier = 5;
+let zoeSpeedMultiplier = 500;
 
 
 function setup() {
@@ -176,10 +176,10 @@ function setup() {
 
   for (i = 0; i < zoeShapes.length; i++) {
     // zoeSpeedMultiplier is adjusting your speedX and speedY
-    zoeShapes[i].speedX = zoeShapes[i].speedX * zoeSpeedMultiplier;
-    zoeShapes[i].speedY = zoeShapes[i].speedY * zoeSpeedMultiplier;
-    zoeShapes[i].speedResetX = zoeShapes[i].speedResetX * zoeSpeedMultiplier;
-    zoeShapes[i].speedResetY = zoeShapes[i].speedResetY * zoeSpeedMultiplier;
+    // zoeShapes[i].speedX = zoeShapes[i].speedX * zoeSpeedMultiplier;
+    // zoeShapes[i].speedY = zoeShapes[i].speedY * zoeSpeedMultiplier;
+    // zoeShapes[i].speedResetX = zoeShapes[i].speedResetX * zoeSpeedMultiplier;
+    // zoeShapes[i].speedResetY = zoeShapes[i].speedResetY * zoeSpeedMultiplier;
     zoeShapesPosition[i] = new Mirror_Zoe(zoeShapes[i]);
   }
 }
@@ -284,7 +284,7 @@ class Mirror_Zoe {
 
   // Move circle method
   moveCircle() {
-        // Making sure that the JS Object in the array is not contain an box with conditional statement.
+    // Making sure that the JS Object in the array is not contain an box with conditional statement.
     if (this.incomingShape.boxX === undefined) {
 
 
@@ -310,5 +310,22 @@ class Mirror_Zoe {
         this.incomingShape.speedY = 0;
       }
     }
+  }
+
+  resetMovement() {
+    if (this.incomingShape.ellipseX === undefined) {
+      if (this.incomingShape.transX === this.incomingShape.xOrigin && this.incomingShape.transY === this.incomingShape.yOrigin) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+    if (this.incomingShape.boxX === undefined) {
+      if (this.incomingShape.circleX === this.incomingShape.xOrigin && this.incomingShape.circleY === this.incomingShape.yOrigin) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+
+    }
+
   }
 }

@@ -172,6 +172,11 @@ class IPhoneMove {
     pop();
   }
 
+  resetMovement() {
+    this.shapeProperties.speedX = Math.random() * 5;
+    this.shapeProperties.speedY = Math.random() * 5;
+  }
+
   showRectangleTrackers() {
     stroke(this.shapeProperties.trackerColor);
     line(this.shapeProperties.posX + this.shapeProperties.width / 2, 0, this.shapeProperties.posX + this.shapeProperties.width / 2, 600);

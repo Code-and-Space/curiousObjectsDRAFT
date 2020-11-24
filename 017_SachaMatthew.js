@@ -340,5 +340,24 @@ class HeadphonesChaos {
     }
   }
 
-
+  resetMovement() {
+    if (this.incomingShape.rectX === undefined && this.incomingShape.arcX === undefined) {
+      if (this.incomingShape.circleX === this.incomingShape.originX && this.incomingShape.circleY === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+    if (this.incomingShape.circleX === undefined && this.incomingShape.arcX === undefined) {
+      if (this.incomingShape.rectX === this.incomingShape.originX && this.incomingShape.rectY === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+    if (this.incomingShape.circleX === undefined && this.incomingShape.rectX === undefined) {
+      if (this.incomingShape.arcX === this.incomingShape.originX && this.incomingShape.arcY === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+  }
 }

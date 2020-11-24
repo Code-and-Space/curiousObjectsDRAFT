@@ -14,8 +14,9 @@ let annaBox01 = {
   originY: 400,
 
   speedX: 1,
-  speedY: 1
+  speedY: 2
 }
+
 let annaBox02 = {
   color: 0, //neck
   rectX: 0,
@@ -31,6 +32,7 @@ let annaBox02 = {
   speedX: 2,
   speedY: 2
 }
+
 let annaBox03 = {
   color: 0, //body cover in the middle
   rectX: 0,
@@ -46,6 +48,7 @@ let annaBox03 = {
   speedX: -2,
   speedY: 1
 }
+
 let annaBox04 = {
   color: 0, //neck cap
   rectX: 0,
@@ -61,6 +64,7 @@ let annaBox04 = {
   speedX: 2,
   speedY: 3
 }
+
 let annaBox05 = {
   color: 0, //cap
   rectX: 0,
@@ -76,6 +80,7 @@ let annaBox05 = {
   speedX: 2,
   speedY: 5
 }
+
 let annaBox06 = {
   color: 0, //handle left
   rectX: 0,
@@ -91,6 +96,7 @@ let annaBox06 = {
   speedX: 9,
   speedY: 4
 }
+
 let annaBox07 = {
   color: 0, //handle right
   rectX: 0,
@@ -106,6 +112,7 @@ let annaBox07 = {
   speedX: 1,
   speedY: 5
 }
+
 let annaBox08 = {
   color: 0, //handle left addition
   rectX: 0,
@@ -121,6 +128,7 @@ let annaBox08 = {
   speedX: 5,
   speedY: 1
 }
+
 let annaBox09 = {
   color: 0, //handle right addition
   rectX: 0,
@@ -136,6 +144,7 @@ let annaBox09 = {
   speedX: 6,
   speedY: 6
 }
+
 let annaBox10 = {
   color: 0, //bottom
   rectX: 0,
@@ -151,6 +160,7 @@ let annaBox10 = {
   speedX: 1,
   speedY: 1
 }
+
 let annaCircle01 = {
   color: 0, //body left
   ellipseX: 0,
@@ -166,6 +176,7 @@ let annaCircle01 = {
   speedX: 9,
   speedY: 9
 }
+
 let annaCircle02 = {
   color: 0, //body right
   ellipseX: 0,
@@ -179,8 +190,9 @@ let annaCircle02 = {
   originY: 250,
 
   speedX: 7,
-  speedY: 7
+  speedY: 2
 }
+
 let annaCircle03 = {
   color: 0, //body left low
   ellipseX: 0,
@@ -196,6 +208,7 @@ let annaCircle03 = {
   speedX: -3,
   speedY: -3
 }
+
 let annaCircle04 = {
   color: 0, //body right low
   ellipseX: 0,
@@ -211,6 +224,7 @@ let annaCircle04 = {
   speedX: -1,
   speedY: -1
 }
+
 let annaArc01 = {
   color: 0, //black
   arcX: 0,
@@ -226,6 +240,7 @@ let annaArc01 = {
   speedX: -4,
   speedY: 6
 }
+
 let annaArc02 = {
   color: 220, //white
   arcX: 0,
@@ -265,7 +280,7 @@ let annaSpeedMultiplier = 1.5;
 //     flaskArray[i] = new MovedFlask (flaskElements[i]);
 //   }
 // }
-
+//
 // function draw() {
 //   background (220);
 //   push();
@@ -281,7 +296,6 @@ let annaSpeedMultiplier = 1.5;
 //   }
 //   pop();
 // }
-
 
 
 
@@ -410,4 +424,26 @@ class MovedFlask {
     line(this.incomingShape.transX, 0, this.incomingShape.transX, height)
     line(0, this.incomingShape.transY, height, this.incomingShape.transY)
   }
+
+  resetMovement() {
+    if (this.incomingShape.ellipseX === undefined && this.incomingShape.arcX === undefined) {
+      if (this.incomingShape.transX === this.incomingShape.originX && this.incomingShape.transY === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+    if (this.incomingShape.rectX === undefined && this.incomingShape.arcX === undefined) {
+      if (this.incomingShape.transX === this.incomingShape.originX && this.incomingShape.transY === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+    if (this.incomingShape.ellipseX === undefined && this.incomingShape.rectX === undefined) {
+      if (this.incomingShape.transX === this.incomingShape.originX && this.incomingShape.transY === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+  }
+
 }

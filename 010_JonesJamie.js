@@ -962,4 +962,26 @@ class Guitar {
       }
     }
   }
+
+  resetMovement() {
+    if (this.incomingShape.rectX === undefined && this.incomingShape.x1 === undefined) {
+      if (this.incomingShape.circleX === this.incomingShape.originX && this.incomingShape.circleY === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(-10, 10)*jamieSpeedMultiplier;
+        this.incomingShape.speedY = getRandomInt(-10, 10)*jamieSpeedMultiplier;
+      }
+    }
+
+    if (this.incomingShape.circleX === undefined && this.incomingShape.x1 === undefined) {
+      if (this.incomingShape.rectW === this.incomingShape.originW && this.incomingShape.rectH === this.incomingShape.originH) {
+        this.incomingShape.speed = getRandomInt(-10, 10)*jamieSpeedMultiplier;
+      }
+    }
+
+    if (this.incomingShape.rectX === undefined && this.incomingShape.circleX === undefined) {
+      if (this.incomingShape.speed === 0) {
+        this.incomingShape.speed = getRandomInt(1, 20)*jamieSpeedMultiplier;
+        this.incomingShape.angle = 0;
+      }
+    }
+  }
 }

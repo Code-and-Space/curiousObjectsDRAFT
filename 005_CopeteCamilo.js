@@ -253,11 +253,15 @@ let camiloRect02 = {
   stroke: 0,
   strokeweight: 3,
   color: 255,
-  rectX: 264.8815 + 109.786,
-  rectY: 551.566 + 56.2805,
+  // rectX: 264.8815 + 109.786,
+  rectX: 300,
+  // rectY: 551.566 + 56.2805,
+  rectY: 551.566,
 
-  originX: 264.8815 + 109.786,
-  originY: 551.566 + 56.2805,
+  // originX: 264.8815 + 109.786,
+  originX: 300,
+  // originY: 551.566 + 56.2805,
+  originY: 551.566,
 
   rectWidth: 70.237,
   rectHeight: 36,
@@ -274,11 +278,15 @@ let camiloRect03 = {
   stroke: 0,
   strokeweight: 3,
   color: 255,
-  rectX: 266.831 + 109.786,
-  rectY: 480.318 + 56.2805,
+  // rectX: 266.831 + 109.786,
+  rectX: 300,
+  // rectY: 480.318 + 56.2805,
+  rectY: 480.318,
 
-  originX: 266.831 + 109.786,
-  originY: 480.318 + 56.2805,
+  // originX: 266.831 + 109.786,
+  originX: 300,
+  // originY: 480.318 + 56.2805,
+  originY: 480.318,
 
   rectWidth: 66.339,
   rectHeight: 15,
@@ -649,4 +657,42 @@ class CamiloKendama {
     }
   }
 
+  resetMovement() {
+    if (this.incomingShape.triX1 === undefined && this.incomingShape.arcX === undefined && this.incomingShape.circX === undefined && this.incomingShape.lineX1 === undefined) {
+      // Below, if the values are equal again, then stop (speedX and speedY = 0).
+      if (parseInt(this.incomingShape.rectX) === parseInt(this.incomingShape.originX) && parseInt(this.incomingShape.rectY) === parseInt(this.incomingShape.originY)) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+
+    // reset circle
+    if (this.incomingShape.triX1 === undefined && this.incomingShape.arcX === undefined && this.incomingShape.rectX === undefined && this.incomingShape.lineX1 === undefined) {
+      // Below, if the values are equal again, then stop (speedX and speedY = 0).
+      if (this.incomingShape.circX === this.incomingShape.originX && parseInt(this.incomingShape.circY) === parseInt(this.incomingShape.originY)) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+
+    // reset arc
+    if (this.incomingShape.triX1 === undefined && this.incomingShape.circX === undefined && this.incomingShape.rectX === undefined && this.incomingShape.lineX1 === undefined) {
+      // Below, if the values are equal again, then stop (speedX and speedY = 0).
+      if (parseInt(this.incomingShape.arcX) === parseInt(this.incomingShape.originX) && parseInt(this.incomingShape.arcY) === parseInt(this.incomingShape.originY)) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+
+    // reset line
+    if (this.incomingShape.triX1 === undefined && this.incomingShape.arcX === undefined && this.incomingShape.rectX === undefined && this.incomingShape.circX === undefined) {
+      // Below, if the values are equal again, then stop (speedX and speedY = 0).
+      if (parseInt(this.incomingShape.lineX1) === parseInt(this.incomingShape.originX1)) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+
+
+    }
+  }
 }

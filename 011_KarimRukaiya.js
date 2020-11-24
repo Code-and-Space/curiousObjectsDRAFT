@@ -595,4 +595,43 @@ class MovedBox {
     line(this.incomingShape.transX, 0,this.incomingShape.transX, height)
     line(0, this.incomingShape.transY, height, this.incomingShape.transY)
   }
+
+  resetMovement() {
+    if (this.incomingShape.ellipseX === undefined && this.incomingShape.p1X === undefined) {
+      if (this.incomingShape.transX === this.incomingShape.originX && this.incomingShape.transY === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+    if (this.incomingShape.rectX === undefined && this.incomingShape.p1X === undefined) {
+
+      if (this.incomingShape.transX === this.incomingShape.originX && this.incomingShape.transY === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+    if (this.incomingShape.rectX === undefined && this.incomingShape.ellipseX === undefined) {
+      if (this.incomingShape.p1X === this.incomingShape.originp1X && this.incomingShape.p1Y === this.incomingShape.originp1Y) {
+        this.incomingShape.speedX1 = getRandomInt(-10, 10);
+        this.incomingShape.speedY1 = getRandomInt(-10, 10);
+      }
+
+      if (this.incomingShape.p2X === this.incomingShape.originp2X && this.incomingShape.p2Y === this.incomingShape.originp2Y) {
+        this.incomingShape.speedX2 = getRandomInt(-10, 10);
+        this.incomingShape.speedY2 = getRandomInt(-10, 10);
+      }
+
+      if (this.incomingShape.p3X === this.incomingShape.originp3X && this.incomingShape.p3Y === this.incomingShape.originp3Y) {
+        this.incomingShape.speedX3 = getRandomInt(-10, 10);
+        this.incomingShape.speedY3 = getRandomInt(-10, 10);
+      }
+
+      if (this.incomingShape.p4X === this.incomingShape.originp4X && this.incomingShape.p4Y === this.incomingShape.originp4Y) {
+        this.incomingShape.speedX4 = getRandomInt(-10, 10);
+        this.incomingShape.speedY4 = getRandomInt(-10, 10);
+      }
+    }
+
+
+  }
 }

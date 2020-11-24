@@ -421,6 +421,26 @@ class YogeshSpeaker {
     }
   }
 
+  resetMovement() {
+    if (this.incomingShape.type === "box") {
+      if (this.incomingShape.X === this.incomingShape.originX && this.incomingShape.Y === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+    if (this.incomingShape.type === "circle") {
+      if (this.incomingShape.X === this.incomingShape.originX && this.incomingShape.Y === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+    if (this.incomingShape.type === "line") {
+      if (this.incomingShape.oneX === this.incomingShape.originX && this.incomingShape.oneY === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+  }
 
   // moveBox() {
   //   if (this.incomingShape.X > width || this.incomingShape.X < 0) {

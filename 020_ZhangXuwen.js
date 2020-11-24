@@ -476,102 +476,30 @@ class XuwenLamp {
       line(0, (this.incomingShape.triangleY2+this.incomingShape.triangleY1)/2, width, (this.incomingShape.triangleY1+this.incomingShape.triangleY2)/2)
     }
   }
-}
 
-//
-// class BoxMoved {
-//   constructor(incomingShape){
-//     this.incomingShape = incomingShape;
-//   }
-//
-//   drawBox() {
-//     push();
-//     if (this.incomingShape.boxX > width || this.incomingShape.boxX < 0) {
-//       this.incomingShape.speedX = this.incomingShape.speedX*-1;
-//     }
-//     this.incomingShape.boxX = this.incomingShape.boxX + this.incomingShape.speedX;
-//     if (this.incomingShape.boxY > height || this.incomingShape.boxY < 0) {
-//       this.incomingShape.speedY = this.incomingShape.speedY*-1;
-//     }
-//     this.incomingShape.boxY = this.incomingShape.boxY + this.incomingShape.speedY;
-//     noStroke();
-//     fill(this.incomingShape.color);
-//     rect(this.incomingShape.boxX,this.incomingShape.boxY, this.incomingShape.boxWidth, this.incomingShape.boxHeight);
-//     pop();
-//   }
-//   tracingObject(incomingGeometry) {
-//
-//     stroke(0)
-//     rectMode(CENTER)
-//     line(this.incomingShape.boxX, 0, this.incomingShape.boxX, height)
-//     line(0, this.incomingShape.boxY, width, this.incomingShape.boxY)
-//   }
-//
-// }
-//
-//
-// class CircleMoved {
-//   constructor(incomingShape){
-//     this.incomingShape = incomingShape;
-//   }
-//
-//   drawCircle() {
-//     fill(this.incomingShape.color);//Black
-//     noStroke()
-//     push()
-//     if (this.incomingShape.boxX > width || this.incomingShape.boxX < 0) {
-//       this.incomingShape.speedX = this.incomingShape.speedX*-1;
-//     }
-//
-//     this.incomingShape.boxX = this.incomingShape.boxX + this.incomingShape.speedX;
-//
-//     if (this.incomingShape.boxY > height || this.incomingShape.boxY < 0) {
-//       this.incomingShape.speedY = this.incomingShape.speedY*-1;
-//     }
-//
-//     this.incomingShape.boxY = this.incomingShape.boxY + this.incomingShape.speedY;
-//     circle(this.incomingShape.boxX, this.incomingShape.boxY, this.incomingShape.boxWidth, this.incomingShape.boxHeight);
-//     pop();
-//
-//   }
-//   tracingObject() {
-//
-//     stroke(0)
-//     rectMode(CENTER)
-//     line(this.incomingShape.boxX, 0, this.incomingShape.boxX, height)
-//     line(0, this.incomingShape.boxY, width, this.incomingShape.boxY)
-//   }
-// }
-//
-//
-// class TriangleMoved {
-//   constructor(incomingShape){
-//     this.incomingShape = incomingShape;
-//   }
-//   drawTriangle() {
-//     //Lamp belly downward triangle
-//     fill(this.incomingShape.color);//Black
-//     noStroke()
-//     push()
-//     if (this.incomingShape.triangleX1 > width || this.incomingShape.triangleX1 < 0 || this.incomingShape.triangleX2 > width || this.incomingShape.triangleX2 < 0 || this.incomingShape.triangleX3 > width || this.incomingShape.triangleX3 < 0 ) {
-//       this.incomingShape.speedX = this.incomingShape.speedX*-1;
-//     }
-//     this.incomingShape.triangleX1 = this.incomingShape.triangleX1 + this.incomingShape.speedX;
-//     this.incomingShape.triangleX2 = this.incomingShape.triangleX2 + this.incomingShape.speedX;
-//     this.incomingShape.triangleX3 = this.incomingShape.triangleX3 + this.incomingShape.speedX;
-//
-//     if (this.incomingShape.triangleY1 > width || this.incomingShape.triangleY1 < 0 || this.incomingShape.triangleY2 > width || this.incomingShape.triangleY2 < 0 || this.incomingShape.triangleY3 > width || this.incomingShape.triangleY3 < 0) {
-//       this.incomingShape.speedY = this.incomingShape.speedY*-1;
-//     }
-//     this.incomingShape.triangleY1 = this.incomingShape.triangleY1 + this.incomingShape.speedY;
-//     this.incomingShape.triangleY2 = this.incomingShape.triangleY2 + this.incomingShape.speedY;
-//     this.incomingShape.triangleY3 = this.incomingShape.triangleY3 + this.incomingShape.speedY;
-//     triangle(this.incomingShape.triangleX1, this.incomingShape.triangleY1, this.incomingShape.triangleX2, this.incomingShape.triangleY2, this.incomingShape.triangleX3, this.incomingShape.triangleY3);
-//
-//     pop();
-//
-//     stroke(0)
-//     line(this.incomingShape.triangleX2, 0, this.incomingShape.triangleX2, height)
-//     line(0, (this.incomingShape.triangleY2+this.incomingShape.triangleY1)/2, width, (this.incomingShape.triangleY1+this.incomingShape.triangleY2)/2)
-//   }
-// }
+  resetMovement() {
+    if (this.incomingShape.circleX === undefined && this.incomingShape.triangleX1 === undefined) {
+      if (this.incomingShape.boxX === this.incomingShape.originX && this.incomingShape.boxY === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+    if (this.incomingShape.boxX === undefined && this.incomingShape.triangleX1 === undefined) {
+      if (this.incomingShape.circleX === this.incomingShape.originX && this.incomingShape.circleY === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+    if (this.incomingShape.circleX === undefined && this.incomingShape.boxX === undefined) {
+      if (this.incomingShape.speedX === 0) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+        xuwenSpeed = 0.005;
+        xuwenAngle = 0;
+      }
+    }
+
+  }
+
+
+}

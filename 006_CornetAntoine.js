@@ -444,7 +444,7 @@ class Drone {
       triangle(this.incomingShape.X1, this.incomingShape.Y1, this.incomingShape.X2, this.incomingShape.Y2, this.incomingShape.X3, this.incomingShape.Y3)
       pop()
 
-      if (this.incomingShape.angle > 360) {
+      if (this.incomingShape.angle > 90) {
         this.incomingShape.speed = 0;
         this.incomingShape.angle = this.incomingShape.originAngle;
       }
@@ -496,14 +496,16 @@ class Drone {
   drawellipse (){
     fill(0);
     if (this.incomingShape.rectX === undefined && this.incomingShape.transX === undefined && this.incomingShape.circleX === undefined && this.incomingShape.lineX1 === undefined) {
-      push()
-      strokeWeight(0)
-      translate(this.incomingShape.ellipseTransX, this.incomingShape.ellipseTransY)
+      push();
+      strokeWeight(0);
+      translate(this.incomingShape.ellipseTransX, this.incomingShape.ellipseTransY);
       rotate (this.incomingShape.ellipserotate);
-      this.incomingShape.ellipserotate = this.incomingShape.ellipserotate + 100
+      this.incomingShape.ellipserotate = this.incomingShape.ellipserotate + 100;
+      blade();
       pop()
     }
   }
+
 
   tracingBox () {
     if (this.incomingShape.transX === undefined && this.incomingShape.lineX1 === undefined && this.incomingShape.circleX === undefined && this.incomingShape.ellipseTransX === undefined) {
@@ -522,4 +524,38 @@ class Drone {
       line(0, this.incomingShape.circleY, width, this.incomingShape.circleY)
     }
   }
+
+  resetMovement() {
+    if (this.incomingShape.transX === undefined && this.incomingShape.lineX1 === undefined && this.incomingShape.circleX === undefined && this.incomingShape.ellipseTransX === undefined) {
+      if (this.incomingShape.rectX === this.incomingShape.originX && this.incomingShape.rectY === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(1, 10);
+        this.incomingShape.speedY = getRandomInt(1, 10);
+      }
+    }
+
+    if (this.incomingShape.rectX === undefined && this.incomingShape.lineX1 === undefined && this.incomingShape.circleX === undefined && this.incomingShape.ellipseTransX === undefined) {
+      if (this.incomingShape.speed === 0) {
+        this.incomingShape.speed = 1;
+        this.incomingShape.angle = 1;
+      }
+    }
+    if (this.incomingShape.rectX === undefined && this.incomingShape.transX === undefined && this.incomingShape.lineX1 === undefined && this.incomingShape.ellipseTransX === undefined) {
+      if (this.incomingShape.circleX === this.incomingShape.originX && this.incomingShape.circleY === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(1, 10);
+        this.incomingShape.speedY = getRandomInt(1, 10);
+      }
+    }
+  }
+}
+
+
+function blade() {
+  push()
+  translate(0,60)
+  ellipse(0,0,25,123);
+  pop()
+  push()
+  translate(0,-60)
+  ellipse(0,0,25,123);
+  pop()
 }

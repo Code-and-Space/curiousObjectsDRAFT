@@ -360,4 +360,21 @@ class TonyWatch {
       }
     }
   }
+
+  resetMovement() {
+    if (this.incomingShape.circX === undefined) {
+      if (this.incomingShape.boxX === this.incomingShape.originX && this.incomingShape.boxY === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+    if (this.incomingShape.boxX === undefined) {
+      if (parseInt(this.incomingShape.circX) === parseInt(this.incomingShape.originX) && parseInt(this.incomingShape.circY) === parseInt(this.incomingShape.originY)) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+  }
+
+
 }

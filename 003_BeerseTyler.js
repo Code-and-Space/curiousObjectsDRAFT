@@ -348,4 +348,26 @@ class TylerGlass {
 
     }
   }
+
+  resetMovement() {
+    if (this.incomingShape.boxX === undefined) {
+
+      // Below, if the values are equal again, then stop (speedX and speedY = 0).
+      if (parseInt(this.incomingShape.circleX) === parseInt(this.incomingShape.originX) && parseInt(this.incomingShape.circleY) === parseInt(this.incomingShape.originY)) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+
+    if (this.incomingShape.boxX === undefined) {
+
+      // Below, if the values are equal again, then stop (speedX and speedY = 0).
+      if (parseInt(this.incomingShape.circleX) === parseInt(this.incomingShape.originX) && parseInt(this.incomingShape.circleY) === parseInt(this.incomingShape.originY)) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+  }
+
+
 }

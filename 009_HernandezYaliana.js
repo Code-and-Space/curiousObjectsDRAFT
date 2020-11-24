@@ -224,4 +224,21 @@ class YalianaLamp {
       line(0, this.incomingShape.lineY, height, this.incomingShape.lineY)
     }
   }
+
+  resetMovement() {
+    if (this.incomingShape.lineX === undefined) {
+      if (this.incomingShape.rectX === this.incomingShape.originX && this.incomingShape.rectY === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+
+    if (this.incomingShape.rectX === undefined) {
+      if (this.incomingShape.lineX === this.incomingShape.originX && this.incomingShape.lineY === this.incomingShape.originY) {
+        this.incomingShape.speedX = getRandomInt(-10, 10);
+        this.incomingShape.speedY = getRandomInt(-10, 10);
+      }
+    }
+
+  }
 }

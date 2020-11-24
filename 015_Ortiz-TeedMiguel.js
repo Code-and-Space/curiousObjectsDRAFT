@@ -324,6 +324,13 @@ class Watermelon{
       this.saidGeo.yspeed = 0;
     }
   }
+
+  resetMovement() {
+    if (this.saidGeo.transX === this.saidGeo.originX & this.saidGeo.transY === this.saidGeo.originY) {
+      this.saidGeo.xspeed = getRandomInt(-10, 10);
+      this.saidGeo.yspeed = getRandomInt(-10, 10);
+    }
+  }
 }
 
 
@@ -385,6 +392,13 @@ class Seed {
     if (this.saidGeo.transX === this.saidGeo.originX & this.saidGeo.transY === this.saidGeo.originY) {
       this.saidGeo.xspeed = 0;
       this.saidGeo.yspeed = 0;
+    }
+  }
+
+  resetMovement() {
+    if (this.saidGeo.transX === this.saidGeo.originX & this.saidGeo.transY === this.saidGeo.originY) {
+      this.saidGeo.xspeed = getRandomInt(-10, 10);
+      this.saidGeo.yspeed = getRandomInt(-10, 10);
     }
   }
 }
