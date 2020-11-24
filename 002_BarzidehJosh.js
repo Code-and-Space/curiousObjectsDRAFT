@@ -80,7 +80,7 @@ let joshRect03a = {
 
 //fill circle Background R
 let joshCircle03a = {
-  color: 'rgb(188,143,143)',
+  color: 'rgb(188,163, 163)',
   circleX: 340,
   circleY: 125,
 
@@ -94,7 +94,7 @@ let joshCircle03a = {
 
 //fill circle Background L
 let joshCircle04a = {
-  color: 'rgb(188,143,143)',
+  color: 'rgb(188,163, 163)',
   circleX: 255,
   circleY: 125,
 
@@ -108,7 +108,7 @@ let joshCircle04a = {
 
 //top rect fill in R
 let joshRect04a = {
-  color: 'rgb(188,143,143)',
+  color: 'rgb(188,163, 163)',
   rectX: 325,
   rectY: 30,
 
@@ -124,7 +124,7 @@ let joshRect04a = {
 
 //top rect fill in L
 let joshRect05a = {
-  color: 'rgb(188,143,143)',
+  color: 'rgb(188,163, 163)',
   rectX: 240,
   rectY: 30,
 
@@ -203,7 +203,7 @@ let joshSpeedMultiplier = 1;
 // }
 
 // function draw() {
-//   background(188,143,143);
+//   background(188,163, 163);
 //
 //   // for (let i = 0; i < joshShapes.length; i++) {
 //   //   joshShapeArray[i].drawBox();
@@ -339,8 +339,8 @@ class JoshMovedShapes{
     }
     if(this.inputGeo.rectX === undefined){
       if (this.inputGeo.circleX === this.inputGeo.originX && this.inputGeo.circleY === this.inputGeo.originY) {
-        this.inputGeo.speedX = getRandomInt(-10, 10) * joshSpeedMultiplier;
-        this.inputGeo.speedY = getRandomInt(-10, 10) * joshSpeedMultiplier;
+        this.inputGeo.speedX = getRandomInt(-1, 10) * joshSpeedMultiplier;
+        this.inputGeo.speedY = getRandomInt(1, 10) * joshSpeedMultiplier;
       }
     }
   }

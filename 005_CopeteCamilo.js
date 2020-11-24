@@ -20,7 +20,7 @@ let camiloRect01 = {
 //BLACK TRIANGLES
 // TOP RIGHT CORNER BLACK TRIANGLE
 let camiloTriangle01 = {
-  color: 0,
+  color: 200,
   strokeweight: 0,
   triX1: 409.786,
   triY1: 193.074,
@@ -46,7 +46,7 @@ let camiloTriangle01 = {
 
 // BOTTOM RIGHT CORNER BLACK TRIANGLE
 let camiloTriangle02 = {
-  color: 0,
+  color: 200,
   strokeweight: 0,
   triX1: 409.786,
   triY1: 294.355,
@@ -68,7 +68,7 @@ let camiloTriangle02 = {
 
 // TOP LEFT CORNER BLACK TRIANGLE
 let camiloTriangle03 = {
-  color: 0,
+  color: 200,
   strokeweight: 0,
   triX1: 236.360,
   triY1: 193.074,
@@ -90,7 +90,7 @@ let camiloTriangle03 = {
 
 // BOTTOM LEFT CORNER BLACK TRIANGLE
 let camiloTriangle04 = {
-  color: 0,
+  color: 200,
   strokeweight: 0,
   triX1: 190.214,
   triY1: 294.355,
@@ -113,7 +113,7 @@ let camiloTriangle04 = {
 // BLACK VERTICAL LINE CONNECTING TRIANGLE TIPS
 // LINE 1
 let camiloLine01 = {
-  color: 0,
+  color: 200,
   strokeweight: 1.5,
   lineX1:236.360,
   lineY1:193.074,
@@ -131,7 +131,7 @@ let camiloLine01 = {
 
 // LINE 2
 let camiloLine02 = {
-  color: 0,
+  color: 200,
   strokeweight: 1.5,
   lineX1:363.640,
   lineY1:193.074,
@@ -150,8 +150,8 @@ let camiloLine02 = {
 // ARCS WITH BLACK FILL
 // ARC 1
 let camiloArc01 = {
-  fill: 0,
-  strokecol: 0,
+  fill: 200,
+  strokecol: 200,
   strokeweight: 0,
   arcX: 300,
   arcY: 129.434,
@@ -170,8 +170,8 @@ let camiloArc01 = {
 
 // ARC 2
 let camiloArc02 = {
-  fill: 0,
-  strokecol: 0,
+  fill: 200,
+  strokecol: 200,
   strokeweight: 0,
   arcX: 300,
   arcY: 369.275,
@@ -212,8 +212,8 @@ let camiloTriangle05 = {
 // REDRAW ARCS WITH NO FILL
 // ARC 1
 let camiloArc03 = {
-  fill: 0,
-  strokecol: 0,
+  fill: 200,
+  strokecol: 200,
   strokeweight: 1.5,
   arcX: 300,
   arcY: 129.434,
@@ -231,8 +231,8 @@ let camiloArc03 = {
 
 // ARC 2
 let camiloArc04 = {
-  fill: 0,
-  strokecol: 0,
+  fill: 200,
+  strokecol: 200,
   strokeweight: 1.5,
   arcX: 300,
   arcY: 369.275,
@@ -250,7 +250,7 @@ let camiloArc04 = {
 
 // BOTTOM RECTANGLE W RADIUSED CORNERS
 let camiloRect02 = {
-  stroke: 0,
+  stroke: 200,
   strokeweight: 3,
   color: 255,
   // rectX: 264.8815 + 109.786,
@@ -275,7 +275,7 @@ let camiloRect02 = {
 
 // THINNER RECTANGLE W RADIUSED CORNERS
 let camiloRect03 = {
-  stroke: 0,
+  stroke: 200,
   strokeweight: 3,
   color: 255,
   // rectX: 266.831 + 109.786,
@@ -300,7 +300,7 @@ let camiloRect03 = {
 
 // WHITE BALL AT TOP
 let camiloCirc01 = {
-  strokecol: 0,
+  strokecol: 200,
   strokeweight: 3,
   color: 255,
 
@@ -319,7 +319,7 @@ let camiloCirc01 = {
 
 // BLACK LINE THROUGH WHITE BALL
 let camiloLine03 = {
-  color: 0,
+  color: 200,
   strokeweight: 1.5,
   lineX1:210,
   lineY1:120.434,

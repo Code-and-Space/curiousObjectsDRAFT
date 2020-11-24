@@ -17,7 +17,7 @@ let mattCircle01 = {
 
 //negativecircle1
 let mattCircle02 = {
-  color: 0,
+  color: 20,
   circleX: 190,
   circleY: 150,
 
@@ -31,7 +31,7 @@ let mattCircle02 = {
 
 //negativerect1
 let mattRect01 = {
-  color: 0,
+  color: 20,
   rectX: 90,
   rectY: 150,
 
@@ -62,7 +62,7 @@ let mattArc01 = {
 
 //metalringnegative
 let mattArc02 = {
-  color: "black",
+  color: 20,
   arcX: 190,
   arcY: 150,
 
@@ -78,7 +78,7 @@ let mattArc02 = {
 
 //negativerect2
 let mattRect02 = {
-  color: "black",
+  color: 20,
   rectX: 145,
   rectY: 150,
 

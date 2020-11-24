@@ -21,7 +21,7 @@ function draw() {
   noStroke();
   translate(0, 0);
   scale(scaleFactor);
-  fill(188, 143, 143); // Light Brown Colored Background
+  fill(200, 183, 183); // Light Brown Colored Background
   rect(0, 0, 600, 600)
   strokeWeight(2);
   stroke(24);
@@ -42,7 +42,7 @@ function draw() {
   translate(200, 0);
   scale(scaleFactor);
 
-  fill(188,143,143);
+  fill(188,163,163);
   rect(0, 0, 600, 600)
   for (let i = 0; i < joshShapeArray.length; i++) {
     joshShapeArray[i].drawBottleGhosted();
@@ -83,7 +83,7 @@ function draw() {
   scale(scaleFactor);
 
   noStroke();
-  fill(220);
+  fill(240);
   rect(0, 0, 600, 600)
 
   for (let i = 0; i < tomShapes01.length; i++) {
@@ -104,7 +104,7 @@ function draw() {
   scale(scaleFactor);
 
   noStroke();
-  fill(0);
+  fill(200);
   rect(0, 0, 600, 600)
 
   rectMode(CENTER);
@@ -161,7 +161,7 @@ function draw() {
   scale(scaleFactor);
 
   noStroke();
-  fill(0);
+  fill(210);
   rect(0, 0, 600, 600)
 
   for (i = 0; i < sonaliBoxes.length; i++) {
@@ -180,7 +180,7 @@ function draw() {
   scale(scaleFactor);
 
   noStroke();
-  fill(51);
+  fill(171);
   rect(0, 0, 600, 600)
 
   for (let i = 0; i < tonyShapesArray.length; i++){
@@ -241,7 +241,7 @@ function draw() {
   scale(scaleFactor);
 
   noStroke();
-  fill(0);
+  fill(180);
   rect(0, 0, 600, 600)
 
   rectMode(CENTER)
@@ -263,7 +263,7 @@ function draw() {
   scale(scaleFactor);
 
   noStroke();
-  fill(220);
+  fill(250);
   rect(0, 0, 600, 600)
   angleMode(RADIANS)
   rectMode(CENTER)
@@ -286,7 +286,7 @@ function draw() {
 
   noStroke();
   angleMode(DEGREES)
-  fill(210);
+  fill(240);
   rect(0, 0, 600, 600)
   // stroke(0)
   strokeWeight(4);
@@ -341,7 +341,7 @@ function draw() {
   // noFill();
   angleMode(RADIANS);
   noStroke();
-  fill(135);
+  fill(233);
   rect(0, 0, 600, 600)
 
   for (i = 0; i < miguelHalfCircles.length; i++){
@@ -394,7 +394,7 @@ function draw() {
   // noFill();
 
   noStroke();
-  fill(0);
+  fill(20);
   rect(0, 0, 600, 600);
   rectMode(CORNER);
 
@@ -417,7 +417,7 @@ function draw() {
   // noFill();
 
   noStroke();
-  fill(250);
+  fill(255);
   rect(0, 0, 600, 600);
   rectMode(CORNER);
 
@@ -436,7 +436,7 @@ function draw() {
   // noFill();
 
   noStroke();
-  fill(0);
+  fill(220);
   rect(0, 0, 600, 600);
   rectMode(CORNER);
 
